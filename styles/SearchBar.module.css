@@ -1,0 +1,27 @@
+@media screen and (min-width: 0px) {
+    .input{
+        width: 250px;
+        background-color: rgb(240, 238, 238);
+        color:rgb(160, 160, 160);
+        border-radius: 6px;
+        border: 0;
+        padding-left: 20px;
+        height: 30px;
+        outline: none;
+    }
+    .icon{
+      
+    }
+ } 
+ 
+ @media screen and (min-width: 620px) {
+    
+ } 
+ 
+ @media screen and (min-width: 960px) {
+     
+ }
+ 
+ @media screen and (min-width: 1200px) {
+ 
+ } 

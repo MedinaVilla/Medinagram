@@ -1,0 +1,57 @@
+@media screen and (min-width: 0px) {
+   .navbar{
+    border-bottom: 1px solid rgb(231, 231, 231);
+   }
+   .flexLogo{
+    flex: 0 0 327px;
+   }
+   .flexSearch{
+    flex: 0 0 327px;
+   }
+   .buttonGroup{
+       display: flex;
+   }
+   .buttonGroup>div{
+    padding-left: 20px;
+   }
+   .buttonGroup img{
+    cursor: pointer;
+   }
+   .list{
+    height: 30px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    list-style-type: none;
+   }
+   .list li{
+    align-items: center;
+}
+
+.num {
+    position: relative;
+  font-size: 8.5px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  right: 8px;
+  text-align: center;
+  top: -18px;
+  background-color: rgb(206, 11, 11);
+  border-radius: 50%;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+}
+} 
+
+@media screen and (min-width: 620px) {
+   
+} 
+
+@media screen and (min-width: 960px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+} 
