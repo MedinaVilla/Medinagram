@@ -1,7 +1,14 @@
-.container {
-}
-
 .main {
   min-height: 50vh;
   background-color: #fafafa;
+  padding-top: 20px;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+.container{
+  display: flex;
+
+}
+.container > div{
+    flex-basis: 100%;
 }

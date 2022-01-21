@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Posts } from '../components/Posts/Posts'
+import { Stories } from '../components/Stories/Stories'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -12,7 +14,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-    
+        <div className={styles.container}>
+          <div>
+            <Stories />
+            <Posts />
+          </div>
+        </div>
       </main>
 
     </div>

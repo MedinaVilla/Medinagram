@@ -33,10 +33,9 @@ export const Navbar: React.FC<{}> = () => {
                     </div>
                 </div>
                 <div >
-                <div style={{ width:"26px", height:"26px", borderRadius:"50%", overflow: 'hidden'}}>
-                <Image src="/assets/profile.jpg" width={26} height={26} alt="home" />
-
-                </div>
+                    <div style={{ width: "26px", height: "26px", borderRadius: "50%", overflow: 'hidden' }}>
+                        <Image src="/assets/profile.jpg" width={26} height={26} alt="home" />
+                    </div>
                 </div>
             </li>
         </ul>

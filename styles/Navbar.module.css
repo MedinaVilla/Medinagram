@@ -25,23 +25,20 @@
     list-style-type: none;
    }
    .list li{
-    align-items: center;
-}
+        align-items: center;
+    }
 
-.num {
+    .num {
     position: relative;
-  font-size: 8.5px;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  right: 8px;
-  text-align: center;
-  top: -18px;
-  background-color: rgb(206, 11, 11);
-  border-radius: 50%;
-  display: inline-block;
-  color: rgb(255, 255, 255);
-}
+    font-size: 8.5px;
+    right: 8px;
+    text-align: center;
+    top: -18px;
+    background-color: rgb(206, 11, 11);
+    border-radius: 50%;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    }
 } 
 
 @media screen and (min-width: 620px) {
