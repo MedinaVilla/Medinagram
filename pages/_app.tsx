@@ -4,7 +4,12 @@ import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <><Navbar /><Component {...pageProps} /><Footer /></>
+  return <>
+    <Navbar />
+    <br/> <br/> <br/>
+    <Component {...pageProps} />
+    <Footer />
+  </>
 }
 
 export default MyApp

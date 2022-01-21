@@ -17,7 +17,7 @@
     text-overflow: "ellipsis";
     overflow: hidden;
     white-space: nowrap;
-    flex: 0 0 100px
+    flex: 0 0 300px
 }
 .link{
     cursor: pointer;
@@ -30,7 +30,7 @@
 .subtitleSuggest{
     font-size: 14px;
     font-weight: 600;
-    color: rgb(167, 166, 166);
+    color: rgb(157, 156, 156);
 }
 .aboutSection{
     padding: 20px;

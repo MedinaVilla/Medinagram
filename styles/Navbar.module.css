@@ -11,6 +11,10 @@
    .flexLogo{
     flex: 0 0 327px;
    }
+   .flexLogo img{
+    cursor: pointer;
+   }
+
    .flexSearch{
     flex: 0 0 327px;
    }
