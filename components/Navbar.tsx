@@ -4,7 +4,7 @@ import styles from "./../styles/Navbar.module.css";
 import { SearchBar } from "./SearchBar";
 
 export const Navbar: React.FC<{}> = () => {
-    return <nav className={styles.navbar} >
+    return <div className={styles.navbar} >
         <ul className={styles.list} >
             <li className={styles.flexLogo} >
                 <Image src="/assets/logo.png" width="115" height="35" alt="logo" />
@@ -39,6 +39,6 @@ export const Navbar: React.FC<{}> = () => {
                 </div>
             </li>
         </ul>
-    </nav>
+    </div>
 
 }
