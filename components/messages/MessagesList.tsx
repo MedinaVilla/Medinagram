@@ -8,9 +8,12 @@ interface IMessages {
     image: string,
     message: string,
     age: string
-
 }
-export const MessagesList: React.FC<{}> = () => {
+interface IProps {
+    onSelect: (nickname:string, image:string) => void
+}
+
+export const MessagesList: React.FC<IProps> = ({onSelect}) => {
     const [messages, setMessages] = useState<IMessages[]>([]);
     const [selected, setSelected] = useState<string>("");
 
@@ -53,36 +56,37 @@ export const MessagesList: React.FC<{}> = () => {
             }
         ])
 
-    })
+    },[])
 
-    const showMessage = (id: string) => {
-        setSelected(id);
+    const showMessage = (nickname: string, image:string) => {
+        setSelected(nickname);
+        onSelect(nickname, image);
     }
 
     return (
-            <div className={styles.container}>
-                <div className={styles.header}>
-                    MedinaVillla
-                </div>
-                <div>
-                    {
-                        messages.length > 0 && messages.map((message: IMessages, index: number) => {
-                            return <div onClick={() => { showMessage(message.idUser) }} className={`${styles.flexMessage} ${selected === message.idUser && styles.selectedMessage}`} key={index}>
-                                <div>
-                                    <div style={{ width: "42px", height: "42px", borderRadius: "50%", overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={message.image} className={styles.icon} layout="fill" alt="post" />
-                                    </div>
-                                </div>
-                                <div className={styles.messageSection}>
-                                    <p className={styles.message}><strong>{message.nickname}</strong> <br /> <small>{message.message}</small></p>
-                                </div>
-                                <div>
-                                    <small className={styles.age}>{message.age}</small>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                MedinaVilla
+            </div>
+            <div>
+                {
+                    messages.length > 0 && messages.map((message: IMessages, index: number) => {
+                        return <div onClick={() => { showMessage(message.nickname, message.image) }} className={`${styles.flexMessage} ${selected === message.nickname && styles.selectedMessage}`} key={index}>
+                            <div>
+                                <div style={{ width: "42px", height: "42px", borderRadius: "50%", overflow: 'hidden', position: 'relative' }}>
+                                    <Image src={message.image} className={styles.icon} layout="fill" alt="post" />
                                 </div>
                             </div>
-                        })
-                    }
-                </div>
+                            <div className={styles.messageSection}>
+                                <p className={styles.message}><strong>{message.nickname}</strong> <br /> <small>{message.message}</small></p>
+                            </div>
+                            <div>
+                                <small className={styles.age}>{message.age}</small>
+                            </div>
+                        </div>
+                    })
+                }
+            </div>
         </div>
     )
 }

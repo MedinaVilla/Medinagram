@@ -1,10 +1,43 @@
 @media screen and (min-width: 0px) {
     .container{
-        width: 800px;
+        width: 600px;
         background-color: white;
         border: 1px solid rgb(214, 214, 214);
         font-size: 11px;
+        display: flex;
+        flex-direction: column;
     }
+    .containerChat{
+        width: 600px;
+        min-height: 70vh;
+        background-color: white;
+        border: 1px solid rgb(214, 214, 214);
+        font-size: 11px;
+        display: flex;
+        flex-direction: column;
+    }
+    .centerContent{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        padding: 20px;
+    }
+    .userInfo{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: lighter;
+    }
+   
  } 
  
  @media screen and (min-width: 620px) {
