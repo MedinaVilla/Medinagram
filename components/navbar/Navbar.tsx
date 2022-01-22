@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./../styles/Navbar.module.css";
-import { SearchBar } from "./SearchBar";
+import styles from "./../../styles/Navbar.module.css";
+import { SearchBar } from "../SearchBar";
 import Link from 'next/link'
+import { LikeNotification } from "./LikeNotification";
 
 export const Navbar: React.FC<{}> = () => {
     return <div className={styles.navbar} >
@@ -19,15 +20,11 @@ export const Navbar: React.FC<{}> = () => {
                 <div>
                     <Image src="/assets/home.png" width={24} height={24} alt="home" />
                 </div>
-                <div>
-                    <Image src="/assets/heart.png" width={24} height={24} alt="home" />
-                </div>
+                <LikeNotification/>
                 <div>
                     <Image src="/assets/compass.png" width={24} height={24} alt="home" />
                 </div>
-                <div>
-                    <Image src="/assets/heart.png" width={24} height={24} alt="home" />
-                </div>
+             
                 <div>
                     <Link href="/messages" passHref={true}><Image src="/assets/message.png" width={24} height={24} alt="home" /></Link>
                     <div className={styles.num} style={{ width: "16px", height: "16px" }}>

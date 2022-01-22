@@ -2,10 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./../../styles/Chat.module.css";
 
-
-
 export const Chat: React.FC<any> = ({ chatWith }) => {
-    console.log(chatWith);
     if (chatWith)
         return (
             <div>
