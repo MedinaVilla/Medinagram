@@ -4,6 +4,7 @@ import styles from "./../../styles/Navbar.module.css";
 import { SearchBar } from "../SearchBar";
 import Link from 'next/link'
 import { LikeNotification } from "./LikeNotification";
+import { ProfileNotification } from "./profile/ProfileNotification";
 
 export const Navbar: React.FC<{}> = () => {
     return <div className={styles.navbar} >
@@ -18,13 +19,15 @@ export const Navbar: React.FC<{}> = () => {
             </li>
             <li className={styles.buttonGroup}>
                 <div>
-                    <Image src="/assets/home.png" width={24} height={24} alt="home" />
+                    <Link href="/" passHref={true}>
+                        <Image src="/assets/home.png" width={24} height={24} alt="home" />
+                    </Link>
                 </div>
-                <LikeNotification/>
+                <LikeNotification />
                 <div>
                     <Image src="/assets/compass.png" width={24} height={24} alt="home" />
                 </div>
-             
+
                 <div>
                     <Link href="/messages" passHref={true}><Image src="/assets/message.png" width={24} height={24} alt="home" /></Link>
                     <div className={styles.num} style={{ width: "16px", height: "16px" }}>
@@ -33,11 +36,7 @@ export const Navbar: React.FC<{}> = () => {
                     </div>
 
                 </div>
-                <div >
-                    <div style={{ width: "26px", height: "26px", borderRadius: "50%", overflow: 'hidden' }}>
-                        <Image src="/assets/profile.jpg" width={26} height={26} alt="home" />
-                    </div>
-                </div>
+                <ProfileNotification />
             </li>
         </ul>
     </div>

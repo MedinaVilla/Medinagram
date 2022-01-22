@@ -1,0 +1,48 @@
+@media screen and (min-width: 0px) {
+    .container{
+        border: 1px solid rgb(214, 214, 214);
+        width: 260px;
+        background-color: white;
+        font-size: 9px;
+        position: fixed;
+        margin-top: 10px;
+        margin-left: -230px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+      .flexItem{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding: 8px 5px 8px 5px;
+        font-size: 14px;
+
+      }
+      .flexItem:hover{
+        background-color: rgb(245, 243, 243);
+      }
+      .flexItem:active{
+        background-color: rgb(245, 243, 243);
+        color: rgb(209, 209, 209);
+      }
+      .flexItem  div{
+        cursor: pointer;
+      }
+     
+      .notificationContent{
+          flex: 1;
+          padding-left: 20px;
+      }
+ } 
+ 
+ @media screen and (min-width: 620px) {
+    
+ } 
+ 
+ @media screen and (min-width: 960px) {
+     
+ }
+ 
+ @media screen and (min-width: 1200px) {
+ 
+ } 

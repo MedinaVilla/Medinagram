@@ -3,11 +3,12 @@
         border: 1px solid rgb(214, 214, 214);
         width: 320px;
         background-color: white;
-        font-size: 8px;
+        font-size: 9px;
         position: fixed;
         margin-top: 10px;
         margin-left: -290px;
         padding: 10px;
+        border-radius: 5px;
     }
       .notificationItem{
         display: flex;
