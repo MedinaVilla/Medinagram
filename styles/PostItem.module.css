@@ -25,9 +25,15 @@
     }
     .buttonGroup{
         display: flex;
+        justify-content: space-between;
     }
-    .buttonGroup>div{
-     padding-left: 10px;
+    
+    .buttonGroupLeft{
+        display: flex;
+    }
+    .buttonGroupLeft>div{
+        cursor: pointer;
+        padding-left: 10px;
     }
 } 
  

@@ -14,10 +14,10 @@ const Messages: NextPage = () => {
     const [selectedChat, setSelectedChat] = useState<ISelectedChat>();
 
 
-    const changeSelectedChat = (nickname: string, image:string) => {
+    const changeSelectedChat = (nickname: string, image: string) => {
         let selectedChat = {
             nickname: nickname,
-            image:image
+            image: image
         }
         setSelectedChat(selectedChat);
     }
@@ -26,7 +26,7 @@ const Messages: NextPage = () => {
         <main className={styles.main}>
             <div className={styles.container}>
                 <div>
-                    <MessagesList onSelect={(nickname: string, image:string) => { changeSelectedChat(nickname, image) }} />
+                    <MessagesList onSelect={(nickname: string, image: string) => { changeSelectedChat(nickname, image) }} />
                 </div>
                 <div>
                     <Chat chatWith={selectedChat} />

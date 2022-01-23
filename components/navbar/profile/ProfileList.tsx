@@ -23,7 +23,7 @@ export const ProfileList: React.FC<{}> = () => {
                     Configuración de cuenta
                 </div>
             </div>
-            <hr/>
+            <hr />
             <div className={styles.flexItem}>
                 <Image src="/assets/logout.png" width={20} height={20} alt="home" />
                 <div className={styles.notificationContent}>

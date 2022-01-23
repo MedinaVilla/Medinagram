@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./../../styles/NotificationList.module.css";
 
 interface INotification {
@@ -21,12 +21,10 @@ interface INotification {
         comment: string,
         date: string
     }
-
 }
 
 export const NotificationList: React.FC<{}> = () => {
     const [notifications, setNotifications] = useState<INotification[]>([]);
-
 
     useEffect(() => {
         //API Call Fetch notifications
@@ -93,7 +91,7 @@ export const NotificationList: React.FC<{}> = () => {
                                 {notification.newFollow ? <p><strong>{notification.userFrom.nickname}</strong> empezó a seguirte</p> : notification.newComment ? <p><strong>{notification.userFrom.nickname}</strong> comentó: {notification.newComment.comment}</p> : notification.newLike ? <p>A <strong>{notification.userFrom.nickname}</strong> le gustó tu foto</p> : ""}
                             </div>
                             <div>
-                                {notification.newFollow ? <button className={styles.buttonFollow}><strong>Siguiendo</strong></button> : notification.newComment ? <Image src="/assets/profile.jpg" width={28} height={28} alt="image"/> : notification.newLike ? <Image src="/assets/profile.jpg" width={28} height={28} alt="image"/> : ""}
+                                {notification.newFollow ? <button className={styles.buttonFollow}><strong>Siguiendo</strong></button> : notification.newComment ? <Image src="/assets/profile.jpg" width={28} height={28} alt="image" /> : notification.newLike ? <Image src="/assets/profile.jpg" width={28} height={28} alt="image" /> : ""}
                             </div>
                         </div>
                     )

@@ -25,7 +25,7 @@ export const LikeNotification: React.FC<{}> = () => {
             };
         }, [ref]);
     }
-    
+
     useEffect(() => {
         //Sockets listens
 

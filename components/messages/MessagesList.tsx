@@ -10,10 +10,10 @@ interface IMessages {
     age: string
 }
 interface IProps {
-    onSelect: (nickname:string, image:string) => void
+    onSelect: (nickname: string, image: string) => void
 }
 
-export const MessagesList: React.FC<IProps> = ({onSelect}) => {
+export const MessagesList: React.FC<IProps> = ({ onSelect }) => {
     const [messages, setMessages] = useState<IMessages[]>([]);
     const [selected, setSelected] = useState<string>("");
 
@@ -56,9 +56,9 @@ export const MessagesList: React.FC<IProps> = ({onSelect}) => {
             }
         ])
 
-    },[])
+    }, [])
 
-    const showMessage = (nickname: string, image:string) => {
+    const showMessage = (nickname: string, image: string) => {
         setSelected(nickname);
         onSelect(nickname, image);
     }

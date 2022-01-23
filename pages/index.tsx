@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div  className={styles.container}>
+        <div className={styles.container}>
           <div >
             <Stories />
             <Posts />

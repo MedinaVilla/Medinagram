@@ -15,7 +15,7 @@ interface IPost {
             video?: string
         },
         description: string,
-        date: Date
+        date: string
     };
 }
 
@@ -42,14 +42,19 @@ export const PostItem: React.FC<IPost> = (post: IPost) => {
             </div>
             <div className={styles.footer}>
                 <div className={styles.buttonGroup}>
-                    <div>
-                        <Image src="/assets/heart.png" width={24} height={24} alt="home" />
+                    <div className={styles.buttonGroupLeft}>
+                        <div>
+                            <Image src="/assets/heart.png" width={24} height={24} alt="home" />
+                        </div>
+                        <div>
+                            <Image src="/assets/comment.png" width={24} height={24} alt="home" />
+                        </div>
+                        <div>
+                            <Image src="/assets/message.png" width={24} height={24} alt="home" />
+                        </div>
                     </div>
                     <div>
-                        <Image src="/assets/comment.png" width={24} height={24} alt="home" />
-                    </div>
-                    <div>
-                        <Image src="/assets/message.png" width={24} height={24} alt="home" />
+                        <Image src="/assets/save.png" width={26} height={24} alt="home" />
                     </div>
                 </div>
                 <p>
@@ -59,7 +64,7 @@ export const PostItem: React.FC<IPost> = (post: IPost) => {
                     <strong>{post.user.name}:</strong> {post.content.description}
                 </p>
                 <p>
-                    <small>{post.content.date.toISOString()}:</small>
+                    <small>{post.content.date}</small>
                 </p>
             </div>
             <br />

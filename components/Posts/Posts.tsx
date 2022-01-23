@@ -14,7 +14,7 @@ interface IPost {
             video?: string
         },
         description: string,
-        date: Date
+        date: string
     };
 }
 
@@ -30,7 +30,7 @@ export const Posts: React.FC<{}> = () => {
                 image: "https://uploads-ssl.webflow.com/61b36a9ff7cd65483c603817/61b36a9ff7cd658647603d33_frase-motivacional-steve-jobs.png"
             },
             description: "La verdad es que sí vale la pena esta frase. Atentos amigos",
-            date: new Date()
+            date: "HACE 23 MINUTOS"
         }
     },
     {
@@ -44,7 +44,7 @@ export const Posts: React.FC<{}> = () => {
                 image: "https://us.123rf.com/450wm/fizkes/fizkes2007/fizkes200701872/152319944-close-up-headshot-portrait-of-smiling-vietnamese-young-woman-look-at-camera-talk-on-video-call-profi.jpg?ver=6"
             },
             description: "Sonríe, la vida solo se vive una vez",
-            date: new Date()
+            date: "HACE UN DÍA"
         }
     },
     {
@@ -58,7 +58,7 @@ export const Posts: React.FC<{}> = () => {
                 image: "https://1frase.com/fotos/d3/d3d9446802a44259755d38e6d163e820.jpg"
             },
             description: "Los imposibles también existen",
-            date: new Date()
+            date: "HACE 1 DIA"
         }
     },
     {
@@ -72,7 +72,7 @@ export const Posts: React.FC<{}> = () => {
                 image: "https://uploads-ssl.webflow.com/61b36a9ff7cd65483c603817/61b36a9ff7cd658647603d33_frase-motivacional-steve-jobs.png"
             },
             description: "La verdad es que sí vale la pena esta frase. Atentos amigos",
-            date: new Date()
+            date: "HACE 2 DIAS"
         }
     }
     ]);
@@ -81,7 +81,7 @@ export const Posts: React.FC<{}> = () => {
         //API Call
 
     }, [])
-    
+
     return (
         <div className={styles.container}>
             {

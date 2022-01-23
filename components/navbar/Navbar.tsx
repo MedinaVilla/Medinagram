@@ -11,7 +11,7 @@ export const Navbar: React.FC<{}> = () => {
         <ul className={styles.list} >
             <li className={styles.flexLogo} >
                 <Link href="/" passHref={true}>
-                    <Image src="/assets/logo.png" width="115" height="35" alt="logo" />
+                    <a><Image src="/assets/logo.png" width="115" height="35" alt="logo" /></a>
                 </Link>
             </li>
             <li className={styles.flexSearch}>
@@ -20,18 +20,20 @@ export const Navbar: React.FC<{}> = () => {
             <li className={styles.buttonGroup}>
                 <div>
                     <Link href="/" passHref={true}>
-                        <Image src="/assets/home.png" width={24} height={24} alt="home" />
+                        <a><Image src="/assets/home.png" width={24} height={24} alt="home" /></a>
                     </Link>
                 </div>
                 <LikeNotification />
                 <div>
                     <Link href="/explore" passHref={true}>
-                        <Image src="/assets/compass.png" width={24} height={24} alt="home" />
+                        <a><Image src="/assets/compass.png" width={24} height={24} alt="compass" /></a>
                     </Link>
                 </div>
 
                 <div>
-                    <Link href="/messages" passHref={true}><Image src="/assets/message.png" width={24} height={24} alt="home" /></Link>
+                    <Link href="/messages" passHref={true}>
+                        <a><Image src="/assets/message.png" width={24} height={24} alt="messages" /></a>
+                    </Link>
                     <div className={styles.num} style={{ width: "16px", height: "16px" }}>
                         <div style={{ marginTop: "2px" }}></div>
                         <strong>2</strong>

@@ -89,7 +89,7 @@ export const Chat: React.FC<any> = ({ chatWith }) => {
                                         return <div className={styles.messageContainer} key={index}>
                                             <span className={`${styles.messageChat} ${message.me ? styles.messageMe : styles.messageFriend}`}>
                                                 {message.message}
-                                                </span>
+                                            </span>
                                         </div>
                                     })
                                 }
@@ -98,7 +98,7 @@ export const Chat: React.FC<any> = ({ chatWith }) => {
 
                     }
                     <div className={styles.inputContainer}>
-                        <div style={{cursor:"pointer"}}>
+                        <div style={{ cursor: "pointer" }}>
                             <Image src="/assets/smile.png" width={28} height={28} alt="home" />
                         </div>
                         <input className={styles.input} placeholder="Enviar un mensaje..." value={input} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setInput(e.target.value) }} />
