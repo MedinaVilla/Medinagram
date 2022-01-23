@@ -1,0 +1,42 @@
+@media screen and (min-width: 0px) {
+    .main {
+        min-height: 50vh;
+        min-width: 100vw;
+        background-color: #fafafa;
+        padding-top: 20px;
+        padding-left: 400px;
+        padding-right: 400px;
+      }
+      .container{
+        display: grid;
+        grid-template-columns: 240px 240px 240px;
+        grid-auto-rows: 240px;
+        align-content: space-around;
+        justify-content: center;
+      }
+      .container div{
+          margin: 4px;
+          display: grid;
+          justify-content: center;
+      }
+      .container div:hover{
+          cursor: pointer;
+          opacity: 0.9;
+    }
+      .itemTwoColumsRows{
+          grid-area: auto/auto/ span 2/span 2
+      }
+      
+ } 
+ 
+ @media screen and (min-width: 620px) {
+    
+ } 
+ 
+ @media screen and (min-width: 960px) {
+     
+ }
+ 
+ @media screen and (min-width: 1200px) {
+ 
+ } 

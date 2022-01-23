@@ -25,7 +25,9 @@ export const Navbar: React.FC<{}> = () => {
                 </div>
                 <LikeNotification />
                 <div>
-                    <Image src="/assets/compass.png" width={24} height={24} alt="home" />
+                    <Link href="/explore" passHref={true}>
+                        <Image src="/assets/compass.png" width={24} height={24} alt="home" />
+                    </Link>
                 </div>
 
                 <div>

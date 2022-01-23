@@ -7,7 +7,31 @@
        padding: 16px;
    }
    .container > div{
-     padding-left: 16px;
+     padding-right: 19px;
+     cursor: pointer;
+   }
+   .nickname{
+     padding-top: 5px;
+     text-align: center;
+     max-width: 42px;
+     overflow: hidden;
+white-space: nowrap;
+     font-size: 8px;
+     text-overflow: ellipsis;
+   }
+   .container > div:hover{
+    opacity: 0.9;
+  }
+   .imageViewed{
+    outline: 1.5px solid;
+    outline-color: rgb(182, 181, 181);
+    outline-offset: 3px;
+   }
+   .imageNotViewed{
+    outline: 2px solid;
+    outline-color: rgb(228, 144, 0);
+
+    outline-offset: 3px;
    }
  } 
  
