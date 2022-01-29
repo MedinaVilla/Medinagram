@@ -1,0 +1,41 @@
+@media screen and (min-width: 0px) {
+    .tabs{
+        display: flex;
+        flex-direction: row;
+    }
+    .tabs div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+    .tabs div:hover{
+       opacity: 0.8;
+    }
+    .tabs div div{
+        font-size: 11px;
+        color: gray;
+    } 
+    .selected{
+        border-top: 1px solid black;
+        font-weight:500;
+        
+    }
+    .selected span{
+        color: rgb(48, 46, 46);
+    }
+} 
+
+@media screen and (min-width: 620px) {
+  
+} 
+
+@media screen and (min-width: 960px) {
+   
+}
+
+@media screen and (min-width: 1200px) {
+
+} 

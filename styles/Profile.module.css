@@ -1,0 +1,71 @@
+@media screen and (min-width: 0px) {
+    .main {
+        background-color: #fafafa;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .header{
+          max-width: 600px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+      }
+      .content{
+        padding-left: 60px;
+      }
+
+     .titleFlex{
+         display: flex;
+         align-items: center;
+            
+        }
+     .titleFlex div{
+         padding-left: 16px;
+        }
+        .subtitleFlex{
+            display: flex;
+            align-items: center;
+               
+           }
+        .subtitleFlex small{
+            padding-right: 24px;
+           }
+
+     .button{
+        cursor: pointer;
+        border: 1px solid rgb(211, 211, 211);
+        padding: 5px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 11px;
+        background-color: transparent;
+        color: rgb(46, 46, 46);
+      }
+      .button:active{
+        cursor: pointer;
+        background-color: rgb(114, 114, 114);
+        border: 1px solid rgb(211, 211, 211);
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 11px;
+        color: rgb(255, 255, 255);
+      }
+      .status{
+          padding-top: 10px;
+      }
+ } 
+ 
+ @media screen and (min-width: 620px) {
+    
+ } 
+ 
+ @media screen and (min-width: 960px) {
+     
+ }
+ 
+ @media screen and (min-width: 1200px) {
+ 
+ } 
