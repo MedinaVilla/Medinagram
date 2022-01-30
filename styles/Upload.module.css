@@ -1,0 +1,51 @@
+@media screen and (min-width: 0px) {
+ .container{
+     display: flex;
+     padding: 10px;
+     flex-direction: column;
+     align-items: center;
+ }
+ .header{
+    width: 400px;
+    text-align: center;
+ }
+ .title{
+    font-weight: 500;
+
+ }
+ .content{
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+     height: 400px;
+    }
+    .button{
+        text-align: center;
+        cursor: pointer;
+        width: 250px;
+        background-color: #0095f6;
+        color: white;
+        font-weight: bold;
+        outline: 0;
+        border: 0;
+        border-radius: 4px;
+        padding: 6px;
+        font-size: 14px;
+    }
+    .button:active{
+        opacity: 0.9;
+    }
+ } 
+ 
+ @media screen and (min-width: 620px) {
+    
+ } 
+ 
+ @media screen and (min-width: 960px) {
+     
+ }
+ 
+ @media screen and (min-width: 1200px) {
+ 
+ } 

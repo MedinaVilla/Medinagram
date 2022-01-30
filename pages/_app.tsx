@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Navbar />
     <br /> <br /> <br />
     <Component {...pageProps} />
+    <div id="modal-root"></div>
     <Footer />
   </>
 }

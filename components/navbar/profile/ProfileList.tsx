@@ -14,31 +14,27 @@ export const ProfileList: React.FC<{}> = () => {
                     </div>
                 </li>
             </Link>
-            <Link href="/profile" passHref={true}>
+            <Link href="/medinavilla/saved" passHref={true}>
                 <div className={styles.flexItem}>
                     <Image src="/assets/save.png" width={20} height={20} alt="home" />
-                    <li className={styles.notificationContent}>
+                    <div className={styles.notificationContent}>
                         Guardado
-                    </li>
+                    </div>
                 </div>
             </Link>
-            <Link href="/profile" passHref={true}>
-                <div className={styles.flexItem}>
-                    <Image src="/assets/config.png" width={20} height={20} alt="home" />
-                    <li className={styles.notificationContent}>
-                        Configuración de cuenta
-                    </li>
+            <div className={styles.flexItem}>
+                <Image src="/assets/config.png" width={20} height={20} alt="home" />
+                <div className={styles.notificationContent}>
+                    Configuración de cuenta
                 </div>
-            </Link>
+            </div>
             <hr />
-            <Link href="/profile" passHref={true}>
-                <div className={styles.flexItem}>
-                    <Image src="/assets/logout.png" width={20} height={20} alt="home" />
-                    <li className={styles.notificationContent}>
-                        Cerrar sesión
-                    </li>
+            <div className={styles.flexItem}>
+                <Image src="/assets/logout.png" width={20} height={20} alt="home" />
+                <div className={styles.notificationContent}>
+                    Cerrar sesión
                 </div>
-            </Link>
+            </div>
         </div>
     )
 }

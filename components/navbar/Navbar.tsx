@@ -5,6 +5,9 @@ import { SearchBar } from "../SearchBar";
 import Link from 'next/link'
 import { LikeNotification } from "./LikeNotification";
 import { ProfileNotification } from "./profile/ProfileNotification";
+import { Upload } from "./Upload";
+
+
 
 export const Navbar: React.FC<{}> = () => {
     return <div className={styles.navbar} >
@@ -29,7 +32,9 @@ export const Navbar: React.FC<{}> = () => {
                         <a><Image src="/assets/compass.png" width={24} height={24} alt="compass" /></a>
                     </Link>
                 </div>
-
+                <div>
+                   <Upload/>
+                </div>
                 <div>
                     <Link href="/messages" passHref={true}>
                         <a><Image src="/assets/message.png" width={24} height={24} alt="messages" /></a>
