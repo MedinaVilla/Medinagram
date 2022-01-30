@@ -1,51 +1,44 @@
 @media screen and (min-width: 0px) {
-      .container{
-        width: 300px;
-        min-height: 100%;
-        display: flex;
-        background-color: white;
-        flex-direction: column;
-        border: 1px solid rgb(214, 214, 214);
-        font-size: 11px;
-      }
-      .flexMessage{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      .header{
-        padding: 20px 0 20px 0;
-        font-size: 12px;
-        font-weight: bold;
-        text-align: center;
-      }
-      .messageSection{
-        padding:  0 0 0 10px;
-      }
-      .selectedMessage{
-        background-color: rgb(238, 238, 238);
-      }
-      .message{
-        width: 200px;
-        color: rgb(116, 116, 116);
-        font-size: 12px;
-        flex: 0 0 200px;
-      }
-      .age{
-        color: rgb(116, 116, 116);
-      }
-      
- } 
- 
- @media screen and (min-width: 620px) {
-    
- } 
- 
- @media screen and (min-width: 960px) {
-     
+  .container{
+      width: 300px;
+      min-height: 100%;
+      display: flex;
+      background-color: white;
+      flex-direction: column;
+      border: 1px solid rgb(214, 214, 214);
+      font-size: 11px;
  }
- 
- @media screen and (min-width: 1200px) {
- 
- } 
+  .flexMessage{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+ }
+  .header{
+      padding: 20px 0 20px 0;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+ }
+  .messageSection{
+      padding: 0 0 0 10px;
+ }
+  .selectedMessage{
+      background-color: rgb(238, 238, 238);
+ }
+  .message{
+      width: 200px;
+      color: rgb(116, 116, 116);
+      font-size: 12px;
+      flex: 0 0 200px;
+ }
+  .age{
+      color: rgb(116, 116, 116);
+ }
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
+}

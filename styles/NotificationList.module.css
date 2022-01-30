@@ -1,56 +1,50 @@
 @media screen and (min-width: 0px) {
-      .container{
-        border: 1px solid rgb(214, 214, 214);
-        width: 320px;
-        background-color: white;
-        font-size: 9px;
-        position: fixed;
-        margin-top: 10px;
-        margin-left: -290px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-      .notificationItem{
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        padding: 5px;
-      }
-      .notificationContent{
-          width: 240px;
-          padding: 0 10px 0 10px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-      }
-      .buttonFollow{
-        cursor: pointer;
-        background-color: white;
-        border: 1px solid rgb(211, 211, 211);
-        padding: 5px;
-        border-radius: 4px;
-        font-size: 11px;
-        color: rgb(46, 46, 46);
-      }
-      .buttonFollow:active{
-        cursor: pointer;
-        background-color: rgb(114, 114, 114);
-        border: 1px solid rgb(211, 211, 211);
-        padding: 5px;
-        border-radius: 4px;
-        font-size: 11px;
-        color: rgb(255, 255, 255);
-      }
- } 
- 
- @media screen and (min-width: 620px) {
-    
- } 
- 
- @media screen and (min-width: 960px) {
-     
+  .container{
+      border: 1px solid rgb(214, 214, 214);
+      width: 320px;
+      background-color: white;
+      font-size: 9px;
+      position: fixed;
+      margin-top: 10px;
+      margin-left: -290px;
+      padding: 10px;
+      border-radius: 5px;
  }
- 
- @media screen and (min-width: 1200px) {
- 
- } 
+  .notificationItem{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      padding: 5px;
+ }
+  .notificationContent{
+      width: 240px;
+      padding: 0 10px 0 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+ }
+  .buttonFollow{
+      cursor: pointer;
+      background-color: white;
+      border: 1px solid rgb(211, 211, 211);
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: rgb(46, 46, 46);
+ }
+  .buttonFollow:active{
+      cursor: pointer;
+      background-color: rgb(114, 114, 114);
+      border: 1px solid rgb(211, 211, 211);
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: rgb(255, 255, 255);
+ }
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
+}

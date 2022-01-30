@@ -6,45 +6,38 @@
         margin-top: 30px;
         border: 1px solid rgb(214, 214, 214);
         font-size: 11px;
-    }
+   }
     .nameUser{
         padding-left: 5px;
         font-weight: 500;
-    }
+   }
     .header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 8px;
-    }
+   }
     .footer{
         padding: 10px;
-    }
+   }
     .icon{
         cursor: pointer;
-    }
+   }
     .buttonGroup{
         display: flex;
         justify-content: space-between;
-    }
-    
+   }
     .buttonGroupLeft{
         display: flex;
-    }
+   }
     .buttonGroupLeft>div{
         cursor: pointer;
         padding-left: 10px;
-    }
-} 
- 
- @media screen and (min-width: 620px) {
-    
- } 
- 
- @media screen and (min-width: 960px) {
-     
- }
- 
- @media screen and (min-width: 1200px) {
- 
- } 
+   }
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
+}

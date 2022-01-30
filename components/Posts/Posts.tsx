@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import styles from "./../../styles/Posts.module.css";
 import { PostItem } from "./PostItem";
-
 interface IPost {
     idPost: string;
     user: {
@@ -79,7 +78,6 @@ export const Posts: React.FC<{}> = () => {
 
     useEffect(() => {
         //API Call
-
     }, [])
 
     return (

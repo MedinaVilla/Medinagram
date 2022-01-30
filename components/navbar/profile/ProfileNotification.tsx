@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { NotificationList } from "../NotificationList";
 import { ProfileList } from "./ProfileList";
 
 export const ProfileNotification: React.FC<{}> = () => {
@@ -29,7 +28,6 @@ export const ProfileNotification: React.FC<{}> = () => {
 
     useEffect(() => {
         //Sockets listens
-
     }, [])
 
 

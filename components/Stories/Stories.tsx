@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./../../styles/Stories.module.css";
-
 interface IStorie {
     nickname: string
     image: string,
@@ -10,7 +9,6 @@ interface IStorie {
 
 export const Stories: React.FC<{}> = () => {
     const [stories, setStories] = useState<IStorie[]>([
-
         {
             nickname: "medinavilla",
             image: "/assets/profile.jpg",

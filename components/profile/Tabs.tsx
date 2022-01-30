@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import styles from "./../../styles/Tabs.module.css";
-
 interface IProps {
     tab?: string
 }
@@ -42,7 +41,7 @@ export const Tabs: React.FC<IProps> = ({ tab }) => {
                     <Image src="/assets/tag.png" width={12} height={12} alt="option3" />
                 </span>
                 <div>
-                    <span> ETIQUETADAS</span>
+                    <span>ETIQUETADAS</span>
                 </div>
             </div>
 

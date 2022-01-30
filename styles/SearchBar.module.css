@@ -8,25 +8,19 @@
         padding-left: 20px;
         height: 30px;
         outline: none;
-    }
+   }
     .container{
         display: flex;
         align-items: center;
-    }
+   }
     .icon{
-       cursor: pointer;
-       margin-left: -24px;
-    }
- } 
- 
- @media screen and (min-width: 620px) {
-    
- } 
- 
- @media screen and (min-width: 960px) {
-     
- }
- 
- @media screen and (min-width: 1200px) {
- 
- } 
+        cursor: pointer;
+        margin-left: -24px;
+   }
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
+}

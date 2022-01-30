@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "./../../styles/NotificationList.module.css";
-
 interface INotification {
     id: string,
     userFrom: {

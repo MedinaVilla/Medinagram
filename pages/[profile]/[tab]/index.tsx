@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { MyStories } from "../../../components/Stories/MyStories";
 import { Tabs } from "../../../components/profile/Tabs";
-import GridProfile from "../../../components/profile/GridProfile";
 import GridSaved from "../../../components/profile/GridSaved";
 import GridTagged from "../../../components/profile/GridTagged";
 

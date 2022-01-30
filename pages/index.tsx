@@ -13,7 +13,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Simple Social app based on Instagram web application using Next JS, Typescript, Node JS, Socket.io" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <div className={styles.container}>
           <div >
@@ -25,7 +24,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-
     </div>
   )
 }

@@ -7,8 +7,6 @@ import { LikeNotification } from "./LikeNotification";
 import { ProfileNotification } from "./profile/ProfileNotification";
 import { Upload } from "./Upload";
 
-
-
 export const Navbar: React.FC<{}> = () => {
     return <div className={styles.navbar} >
         <ul className={styles.list} >
@@ -33,7 +31,7 @@ export const Navbar: React.FC<{}> = () => {
                     </Link>
                 </div>
                 <div>
-                   <Upload/>
+                    <Upload />
                 </div>
                 <div>
                     <Link href="/messages" passHref={true}>
@@ -49,5 +47,4 @@ export const Navbar: React.FC<{}> = () => {
             </li>
         </ul>
     </div>
-
 }

@@ -8,7 +8,6 @@ import GridProfile from "../../components/profile/GridProfile";
 
 const Profile: NextPage = () => {
 
-
     return (
         <main className={styles.main}>
             {/* Profile Header */}

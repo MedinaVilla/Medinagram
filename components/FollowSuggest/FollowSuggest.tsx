@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { Fragment, useState } from "react";
 import styles from "./../../styles/FollowSuggest.module.css";
-
 interface ISuggest {
     nickname: string
     image: string

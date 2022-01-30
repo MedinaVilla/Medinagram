@@ -1,13 +1,21 @@
-.main {
-  min-height: 50vh;
-  width: 100vw;
-  background-color: #fafafa;
-  padding-top: 20px;
-  padding-left: 400px;
-  padding-right: 400px;
-  max-width: 100%;
+@media screen and (min-width: 0px) {
+  .main {
+      min-height: 50vh;
+      width: 100vw;
+      background-color: #fafafa;
+      padding-top: 20px;
+      padding-left: 400px;
+      padding-right: 400px;
+      max-width: 100%;
+ }
+  .container{
+      display: flex;
+      justify-content: center;
+ }
 }
-.container{
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
 }

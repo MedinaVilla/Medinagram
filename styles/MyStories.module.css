@@ -3,11 +3,11 @@
         width: 500px;
         display: flex;
         padding-top: 24px;
-    }
+   }
     .container > div{
-      padding-right: 36px;
-      cursor: pointer;
-    }
+        padding-right: 36px;
+        cursor: pointer;
+   }
     .nickname{
         padding-top: 10px;
         text-align: center;
@@ -18,22 +18,16 @@
         font-weight: bold;
         color: rgb(78, 78, 78);
         text-overflow: ellipsis;
-      }
+   }
     .imageNotViewed{
-     outline: 2px solid;
-     outline-color: rgb(226, 226, 226);
-     outline-offset: 3px;
-    }
-  } 
-  
-  @media screen and (min-width: 620px) {
-     
-  } 
-  
-  @media screen and (min-width: 960px) {
-      
-  }
-  
-  @media screen and (min-width: 1200px) {
-  
-  } 
+        outline: 2px solid;
+        outline-color: rgb(226, 226, 226);
+        outline-offset: 3px;
+   }
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
+}

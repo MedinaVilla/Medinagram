@@ -1,40 +1,48 @@
-.container{
-    margin-left: 30px;
-    width: 300px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 11px;
+@media screen and (min-width: 0px) {
+    .container{
+        margin-left: 30px;
+        width: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 11px;
+   }
+    .profileSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+   }
+    .info{
+        display: block;
+        max-width: 150px;
+        text-overflow: "ellipsis";
+        overflow: hidden;
+        white-space: nowrap;
+        flex: 0 0 300px 
+   }
+    .link{
+        cursor: pointer;
+        color:#0095f6;
+        font-weight: bold;
+   }
+    .suggestSection{
+        padding: 0 20px 0 20px;
+   }
+    .subtitleSuggest{
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(157, 156, 156);
+   }
+    .aboutSection{
+        padding: 20px;
+   }
+    .aboutLinks{
+        color: rgb(172, 172, 172);
+   }
 }
-.profileSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;    
+@media screen and (min-width: 620px) {
 }
-.info{
-    display: block;
-    max-width: 150px;
-    text-overflow: "ellipsis";
-    overflow: hidden;
-    white-space: nowrap;
-    flex: 0 0 300px
+@media screen and (min-width: 960px) {
 }
-.link{
-    cursor: pointer;
-    color:#0095f6;
-    font-weight: bold;
-}
-.suggestSection{
-    padding: 0 20px 0 20px;
-}
-.subtitleSuggest{
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(157, 156, 156);
-}
-.aboutSection{
-    padding: 20px;
-}
-.aboutLinks{
-    color: rgb(172, 172, 172);
+@media screen and (min-width: 1200px) {
 }

@@ -1,48 +1,41 @@
 @media screen and (min-width: 0px) {
-   .container{
-       border: 1px solid rgb(214, 214, 214);
-       width: 500px;
-       display: flex;
-       background-color: white;
-       padding: 16px;
-   }
-   .container > div{
-     padding-right: 19px;
-     cursor: pointer;
-   }
-   .nickname{
-     padding-top: 5px;
-     text-align: center;
-     max-width: 42px;
-     overflow: hidden;
-white-space: nowrap;
-     font-size: 8px;
-     text-overflow: ellipsis;
-   }
-   .container > div:hover{
-    opacity: 0.9;
-  }
-   .imageViewed{
-    outline: 1.5px solid;
-    outline-color: rgb(182, 181, 181);
-    outline-offset: 3px;
-   }
-   .imageNotViewed{
-    outline: 2px solid;
-    outline-color: rgb(228, 144, 0);
-
-    outline-offset: 3px;
-   }
- } 
- 
- @media screen and (min-width: 620px) {
-    
- } 
- 
- @media screen and (min-width: 960px) {
-     
+  .container{
+      border: 1px solid rgb(214, 214, 214);
+      width: 500px;
+      display: flex;
+      background-color: white;
+      padding: 16px;
  }
- 
- @media screen and (min-width: 1200px) {
- 
- } 
+  .container > div{
+      padding-right: 19px;
+      cursor: pointer;
+ }
+  .nickname{
+      padding-top: 5px;
+      text-align: center;
+      max-width: 42px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 8px;
+      text-overflow: ellipsis;
+ }
+  .container > div:hover{
+      opacity: 0.9;
+ }
+  .imageViewed{
+      outline: 1.5px solid;
+      outline-color: rgb(182, 181, 181);
+      outline-offset: 3px;
+ }
+  .imageNotViewed{
+      outline: 2px solid;
+      outline-color: rgb(228, 144, 0);
+      outline-offset: 3px;
+ }
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 1200px) {
+}

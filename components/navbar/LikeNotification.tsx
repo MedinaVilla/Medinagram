@@ -28,7 +28,6 @@ export const LikeNotification: React.FC<{}> = () => {
 
     useEffect(() => {
         //Sockets listens
-
     }, [])
 
     return (

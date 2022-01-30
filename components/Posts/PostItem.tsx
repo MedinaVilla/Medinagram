@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./../../styles/PostItem.module.css";
-
-
 interface IPost {
     idPost: string;
     user: {
