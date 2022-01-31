@@ -12,7 +12,7 @@ export const Navbar: React.FC<{}> = () => {
         <ul className={styles.list} >
             <li className={styles.flexLogo} >
                 <Link href="/" passHref={true}>
-                    <a><Image src="/assets/logo.png" width="115" height="35" alt="logo" /></a>
+                    <a><Image src="/assets/newlogo.png" width="125" height="35" alt="logo" /></a>
                 </Link>
             </li>
             <li className={styles.flexSearch}>

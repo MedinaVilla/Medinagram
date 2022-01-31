@@ -24,7 +24,7 @@ export const Upload: React.FC<{}> = () => {
     return (
         <>
             <div onClick={() => { show() }}>
-                <Image src="/assets/upload.png" width={24} height={24} alt="home" />
+                <Image src="/assets/post.png" width={24} height={24} alt="home" />
             </div>
             {ready && ReactDOM.createPortal(<Modal open={showModal} onClose={hide!}>
                 <div className={styles.container}>

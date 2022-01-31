@@ -22,7 +22,7 @@
     .imageNotViewed{
         outline: 2px solid;
         outline-color: rgb(226, 226, 226);
-        outline-offset: 3px;
+        outline-offset: 2px;
    }
 }
 @media screen and (min-width: 620px) {

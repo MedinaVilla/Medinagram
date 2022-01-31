@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./../../styles/Stories.module.css";
 interface IStorie {
     nickname: string
@@ -45,26 +45,63 @@ export const Stories: React.FC<{}> = () => {
             view: true
         },
         {
-            nickname: "anonymous",
+            nickname: "AB",
             image: "https://random.imagecdn.app/204/203",
+            view: true
+        },
+        {
+            nickname: "BL",
+            image: "https://random.imagecdn.app/208/207",
+            view: true
+        },
+        {
+            nickname: "always",
+            image: "https://random.imagecdn.app/209/207",
+            view: true
+        },
+        {
+            nickname: "abril974",
+            image: "https://random.imagecdn.app/202/199",
+            view: true
+        },
+        {
+            nickname: "madribd",
+            image: "https://random.imagecdn.app/201/199",
+            view: true
+        },
+        {
+            nickname: "medina_fans",
+            image: "https://random.imagecdn.app/201/206",
             view: true
         }
     ]);
+    const ref = useRef<any>(null); 
+
+    const scroll = (scrollOffset:number) => {
+        console.log("scrolling")
+        ref.current.scrollLeft += scrollOffset;
+      };
 
     return (
-        <div className={styles.container}>
-            {stories.length > 0 && stories.map((storie: IStorie, index: number) => {
-                return (
-                    <div key={index}>
-                        <div className={`${storie.view ? styles.imageViewed : styles.imageNotViewed}`} style={{ width: "42px", height: "42px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
-                            <Image src={storie.image} layout="fill" alt="home" />
+        <div>
+            <div onClick={()=>{scroll(-160)}}  className={styles.leftArrow}>
+                <Image src="/assets/left.png" width={20} height={20} alt="right" />
+            </div>
+            <div className={styles.container} ref={ref}>
+                {stories.length > 0 && stories.map((storie: IStorie, index: number) => {
+                    return (
+                        <div key={index}>
+                            <div className={`${storie.view ? styles.imageViewed : styles.imageNotViewed}`} style={{ width: "42px", height: "42px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
+                                <Image src={storie.image} layout="fill" alt="home" />
+                            </div>
+                            <div className={styles.nickname}>{storie.nickname}</div>
                         </div>
-                        <div className={styles.nickname}>{storie.nickname}</div>
-
-                    </div>
-                )
-            })}
-
+                    )
+                })}
+            </div>
+            <div onClick={()=>{scroll(160)}} className={styles.rightArrow}>
+                <Image src="/assets/right.png" layout="fill" alt="right" />
+            </div>
         </div>
     )
 }

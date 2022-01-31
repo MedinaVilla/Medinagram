@@ -10,7 +10,7 @@ interface ISuggest {
 export const FollowSuggest: React.FC<{}> = () => {
     const [profile, setProfile] = useState<any>(
         {
-            nickname: "MedinaVilla",
+            nickname: "medinavilla",
             name: "Medina",
             image: "https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rnc7jXLZ71UAX9f0vx-&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT97zvuWfTwKeljU8WkFcqngUwdKaK2y_Iopn3yZMKjEow&oe=61F1ACAF&_nc_sid=7bff83"
         }
@@ -45,14 +45,15 @@ export const FollowSuggest: React.FC<{}> = () => {
                     <Image src={profile.image} layout="fill" alt="profile" />
                 </div>
                 <div className={styles.info}>
-                    <p><strong>{profile.nickname}</strong> <br />{profile.name}</p>
+                    <p ><strong>{profile.nickname}</strong> <br /><span className={styles.nickname}>{profile.name}</span></p>
                 </div>
                 <div>
                     <p className={styles.link}>Cambiar</p>
                 </div>
             </div>
             <div className={styles.suggestSection}>
-                <p className={styles.subtitleSuggest}>Sugerencias para tí</p>
+
+                <p ><span className={styles.subtitleSuggest}>Sugerencias para tí</span> <span style={{ float: "right", color: "#26262", fontWeight: "500", fontSize: "10px" }}>Ver todo</span></p>
                 {
                     suggests.length > 0 && suggests.map((suggest: ISuggest, index: number) => {
                         return (
@@ -61,7 +62,7 @@ export const FollowSuggest: React.FC<{}> = () => {
                                     <Image src={suggest.image} layout="fill" alt="profile" />
                                 </div>
                                 <div className={styles.info}>
-                                    <p style={{ textOverflow: "ellipsis" }}><strong>{suggest.nickname}</strong> <br />{suggest.friends.length > 0 && <Fragment key={index}>{suggest.friends[0]} y {suggest.friends.length - 1} siguen esta cuenta</Fragment>}</p>
+                                    <p style={{ color: "#262626", textOverflow: "ellipsis", overflow: "hidden" }}><strong>{suggest.nickname}</strong> <br /> <span className={styles.followFriends}>{suggest.friends.length > 0 && <Fragment key={index}>{suggest.friends[0]} y {suggest.friends.length - 1} siguen esta cuenta</Fragment>}</span></p>
                                 </div>
                                 <div>
                                     <p className={styles.link}>Seguir</p>

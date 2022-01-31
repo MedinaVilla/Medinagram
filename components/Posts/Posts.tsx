@@ -5,7 +5,8 @@ interface IPost {
     idPost: string;
     user: {
         name: string,
-        image: string
+        image: string,
+        storyStatus: number
     };
     content: {
         media: {
@@ -22,7 +23,8 @@ export const Posts: React.FC<{}> = () => {
         idPost: "1",
         user: {
             name: "bennyIbarraOfficial",
-            image: "https://pbs.twimg.com/profile_images/1426936466484043785/oVG9izi9_400x400.jpg"
+            image: "https://pbs.twimg.com/profile_images/1426936466484043785/oVG9izi9_400x400.jpg",
+            storyStatus: 1
         },
         content: {
             media: {
@@ -36,7 +38,8 @@ export const Posts: React.FC<{}> = () => {
         idPost: "2",
         user: {
             name: "Any Lu",
-            image: "https://us.123rf.com/450wm/fizkes/fizkes2007/fizkes200701872/152319944-close-up-headshot-portrait-of-smiling-vietnamese-young-woman-look-at-camera-talk-on-video-call-profi.jpg?ver=6"
+            image: "https://us.123rf.com/450wm/fizkes/fizkes2007/fizkes200701872/152319944-close-up-headshot-portrait-of-smiling-vietnamese-young-woman-look-at-camera-talk-on-video-call-profi.jpg?ver=6",
+            storyStatus: 0
         },
         content: {
             media: {
@@ -50,7 +53,8 @@ export const Posts: React.FC<{}> = () => {
         idPost: "3",
         user: {
             name: "Medina Villa",
-            image: "https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rnc7jXLZ71UAX9f0vx-&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT97zvuWfTwKeljU8WkFcqngUwdKaK2y_Iopn3yZMKjEow&oe=61F1ACAF&_nc_sid=7bff83"
+            image: "https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rnc7jXLZ71UAX9f0vx-&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT97zvuWfTwKeljU8WkFcqngUwdKaK2y_Iopn3yZMKjEow&oe=61F1ACAF&_nc_sid=7bff83",
+            storyStatus: 1
         },
         content: {
             media: {
@@ -64,7 +68,23 @@ export const Posts: React.FC<{}> = () => {
         idPost: "4",
         user: {
             name: "Medina Villa",
-            image: "https://pbs.twimg.com/profile_images/1426936466484043785/oVG9izi9_400x400.jpg"
+            image: "https://pbs.twimg.com/profile_images/1426936466484043785/oVG9izi9_400x400.jpg",
+            storyStatus: 1
+        },
+        content: {
+            media: {
+                image: "https://uploads-ssl.webflow.com/61b36a9ff7cd65483c603817/61b36a9ff7cd658647603d33_frase-motivacional-steve-jobs.png"
+            },
+            description: "La verdad es que sí vale la pena esta frase. Atentos amigos",
+            date: "HACE 2 DIAS"
+        }
+    },
+    {
+        idPost: "5",
+        user: {
+            name: "andreePuig",
+            image: "https://random.imagecdn.app/204/203",
+            storyStatus: 2
         },
         content: {
             media: {

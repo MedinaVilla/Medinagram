@@ -2,13 +2,17 @@
   .container{
       border: 1px solid rgb(214, 214, 214);
       width: 500px;
-      display: flex;
       background-color: white;
-      padding: 16px;
- }
+      padding: 12px 16px 6px 16px;
+      white-space: nowrap;
+      overflow-y: hidden; 
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
   .container > div{
       padding-right: 19px;
-      cursor: pointer;
+      cursor: pointer; 
+      display: inline-block;
  }
   .nickname{
       padding-top: 5px;
@@ -25,13 +29,37 @@
   .imageViewed{
       outline: 1.5px solid;
       outline-color: rgb(182, 181, 181);
-      outline-offset: 3px;
+      outline-offset: 2px;
  }
   .imageNotViewed{
       outline: 2px solid;
       outline-color: rgb(228, 144, 0);
-      outline-offset: 3px;
+      outline-offset: 2px;
  }
+ .leftArrow{
+     position: absolute!important;
+     top: 110px !important;
+     margin-left: 5px;
+     width: 20px;
+     z-index: 9;
+     height: 20px;
+     border-radius: 50%;
+     background-color: rgb(255, 255, 255);
+     opacity: 0.8;
+     cursor: pointer;
+ }
+ .rightArrow{
+    position: absolute!important;
+    top: 110px !important;
+    margin-left: 475px;
+    z-index: 9;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+     opacity: 0.7;
+    cursor: pointer;
+}
 }
 @media screen and (min-width: 620px) {
 }
