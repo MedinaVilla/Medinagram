@@ -22,12 +22,14 @@ export const ProfileList: React.FC<{}> = () => {
                     </div>
                 </div>
             </Link>
+            <Link href="/accounts/edit" passHref={true}>
             <div className={styles.flexItem}>
                 <Image src="/assets/config.png" width={20} height={20} alt="home" />
                 <div className={styles.notificationContent}>
                     Configuración de cuenta
                 </div>
             </div>
+            </Link>
             <hr />
             <div className={styles.flexItem}>
                 <Image src="/assets/logout.png" width={20} height={20} alt="home" />

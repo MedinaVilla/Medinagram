@@ -75,18 +75,21 @@ export const Stories: React.FC<{}> = () => {
             view: true
         }
     ]);
-    const ref = useRef<any>(null); 
+    const ref = useRef<any>(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
-    const scroll = (scrollOffset:number) => {
-        console.log("scrolling")
-        ref.current.scrollLeft += scrollOffset;
-      };
+    const scroll = (scrollOffset: number) => {
+        let scroll = ref.current.scrollLeft + scrollOffset;
+        ref.current.scrollLeft = scroll;
+        setScrollPosition(scroll);
+    };
 
     return (
         <div>
-            <div onClick={()=>{scroll(-160)}}  className={styles.leftArrow}>
+
+            {scrollPosition > 0 && <div onClick={() => { scroll(-170) }} className={styles.leftArrow}>
                 <Image src="/assets/left.png" width={20} height={20} alt="right" />
-            </div>
+            </div>}
             <div className={styles.container} ref={ref}>
                 {stories.length > 0 && stories.map((storie: IStorie, index: number) => {
                     return (
@@ -99,8 +102,8 @@ export const Stories: React.FC<{}> = () => {
                     )
                 })}
             </div>
-            <div onClick={()=>{scroll(160)}} className={styles.rightArrow}>
-                <Image src="/assets/right.png" layout="fill" alt="right" />
+            <div onClick={() => { scroll(170) }} className={styles.rightArrow}>
+                <Image src="/assets/right.jpg" layout="fill" alt="right" />
             </div>
         </div>
     )
