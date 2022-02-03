@@ -1,0 +1,52 @@
+@media screen and (min-width: 0px) {
+    .container{
+        padding: 0 20px 20px 20px;
+    }
+    .title{
+        font-weight: lighter;
+        font-size: 24px;
+    }
+    .text{
+        font-size: 13px;
+        color: rgb(0, 0, 0)
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(199, 199, 199);
+    }
+    .header p:nth-child(1){
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .header p:nth-child(2){
+        font-weight: 500;
+        color: #0095f6;
+        font-size: 11px;
+        opacity: 0.4;
+    }
+    .submit{
+        text-align: center;
+        cursor: pointer;
+        background-color: #0095f6;
+        color: white;
+        font-weight: bold;
+        outline: 0;
+        border: 0;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 11px;
+   }
+   .submit:disabled{
+    opacity: 0.4;
+}
+
+}
+ @media screen and (min-width: 620px) {
+ }
+ @media screen and (min-width: 960px) {
+ }
+ @media screen and (min-width: 1200px) {
+ }
+ 

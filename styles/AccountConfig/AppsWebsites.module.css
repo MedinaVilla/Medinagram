@@ -1,0 +1,57 @@
+@media screen and (min-width: 0px) {
+    .container{
+        padding: 0 20px 20px 20px;
+    }
+    .title{
+        font-weight: lighter;
+        font-size: 28px;
+    }
+    .tabs{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+   }
+    .tabs div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        padding:5px 10px 5px 10px;
+   }
+    .tabs div:hover{
+        opacity: 0.8;
+   }
+    .tabs div div{
+        font-size: 14px;
+        color: gray;
+        
+   }
+    .selected{
+        border-bottom: 1px solid black;
+        font-weight:500;
+   }
+   .notSelected{
+    border-bottom: 1px solid rgb(231, 231, 231);
+    font-weight:500;
+}
+    .selected span{
+        color: rgb(0, 0, 0);
+   }
+   .info{
+    font-size: 13px;
+}
+    .smallText{
+        color: #8e8e8e;
+    }
+    .link{
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+ }
+ @media screen and (min-width: 620px) {
+ }
+ @media screen and (min-width: 960px) {
+ }
+ @media screen and (min-width: 1200px) {
+ }
+ 

@@ -1,0 +1,29 @@
+@media screen and (min-width: 0px) {
+   .container{
+    padding: 0 20px 20px 20px;
+   }
+   .title{
+    font-weight: lighter;
+    font-size: 28px;
+   }
+   .option{
+     display: flex;
+    }
+    .option >div{
+      padding-right: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #262626;
+    }
+    .smallText{
+      color: #8e8e8e;
+      font-size: 11px;
+    }
+ }
+ @media screen and (min-width: 620px) {
+ }
+ @media screen and (min-width: 960px) {
+ }
+ @media screen and (min-width: 1200px) {
+ }
+ 

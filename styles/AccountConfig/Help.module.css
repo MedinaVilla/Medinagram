@@ -1,0 +1,31 @@
+@media screen and (min-width: 0px) {
+    .container{
+        padding: 0 20px 20px 20px;
+    }
+    .title{
+        font-weight: lighter;
+        font-size: 24px;
+    }
+    .flex{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+
+    }
+    .flex:hover{
+       opacity: 0.8;
+
+    }
+    .flex div{
+       padding-top: 8px;
+    }
+ }
+ @media screen and (min-width: 620px) {
+ }
+ @media screen and (min-width: 960px) {
+ }
+ @media screen and (min-width: 1200px) {
+ }
+ 

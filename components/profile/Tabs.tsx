@@ -14,7 +14,7 @@ export const Tabs: React.FC<IProps> = ({ tab }) => {
         const pageTo = `/${profile}/${href}`;
 
         if (router.asPath.toString() !== pageTo) {
-            router.push(pageTo)
+            router.push(pageTo);
         }
     }
 
@@ -44,7 +44,6 @@ export const Tabs: React.FC<IProps> = ({ tab }) => {
                     <span>ETIQUETADAS</span>
                 </div>
             </div>
-
         </div>
     )
 }
