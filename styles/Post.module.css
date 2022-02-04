@@ -1,0 +1,91 @@
+@media screen and (min-width: 0px) {
+    .card{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        justify-content: center;
+        font-size: 12px;
+   }
+    .nameUser{
+        font-size: 12px;
+        font-weight: 500;
+   }
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8px;
+   }
+   .header > div:nth-child(2){
+       padding-left: 14px;
+        flex: 1;
+   }
+   .descriptionContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+    .description{
+        font-weight: lighter;
+        padding-left: 14px;
+    }
+    .icon{
+        cursor: pointer;
+   }
+    .buttonGroup{
+        display: flex;
+        justify-content: space-between;
+   }
+    .buttonGroupLeft{
+        display: flex;
+   }
+    .buttonGroupLeft>div{
+        cursor: pointer;
+        padding-right: 10px;
+   }
+    .bottom{
+        padding: 20px 20px 15px 20px;
+        background-color: white;
+        border: 1px solid rgb(214, 214, 214);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+    }
+   .inputGroup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .input{
+        font-size: 11px;
+        width: 100%;
+        outline: 0;
+        border: 0;
+        padding: 10px;
+    }
+ 
+    .link{
+        color: #0095f6;
+        font-weight: 600;
+    }
+
+    .imageViewed{
+        outline: 1.5px solid;
+        outline-color: rgb(182, 181, 181);
+        outline-offset: 2px;
+   }
+    .imageNotViewed{
+        outline: 2px solid;
+        outline-color: rgb(228, 144, 0);
+        outline-offset: 2px;
+   }
+  }
+  @media screen and (min-width: 620px) {
+  }
+  @media screen and (min-width: 960px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  

@@ -28,22 +28,22 @@ export const Posts: React.FC<{}> = () => {
         },
         content: {
             media: {
-                image: "https://uploads-ssl.webflow.com/61b36a9ff7cd65483c603817/61b36a9ff7cd658647603d33_frase-motivacional-steve-jobs.png"
+                image: "/assets/post1.jpg"
             },
-            description: "La verdad es que sí vale la pena esta frase. Atentos amigos",
+            description: "Muy agradecido con ustedes por hacer esto posible. No tengo palabras para describir lo que sentí arriba del escenario. Los quiero a todos.",
             date: "HACE 23 MINUTOS"
         }
     },
     {
         idPost: "2",
         user: {
-            name: "Any Lu",
+            name: "annylu",
             image: "https://us.123rf.com/450wm/fizkes/fizkes2007/fizkes200701872/152319944-close-up-headshot-portrait-of-smiling-vietnamese-young-woman-look-at-camera-talk-on-video-call-profi.jpg?ver=6",
             storyStatus: 0
         },
         content: {
             media: {
-                image: "https://us.123rf.com/450wm/fizkes/fizkes2007/fizkes200701872/152319944-close-up-headshot-portrait-of-smiling-vietnamese-young-woman-look-at-camera-talk-on-video-call-profi.jpg?ver=6"
+                image: "/assets/post2.jpg"
             },
             description: "Sonríe, la vida solo se vive una vez",
             date: "HACE UN DÍA"
@@ -52,30 +52,30 @@ export const Posts: React.FC<{}> = () => {
     {
         idPost: "3",
         user: {
-            name: "Medina Villa",
+            name: "medinavilla",
             image: "https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rnc7jXLZ71UAX9f0vx-&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT97zvuWfTwKeljU8WkFcqngUwdKaK2y_Iopn3yZMKjEow&oe=61F1ACAF&_nc_sid=7bff83",
             storyStatus: 1
         },
         content: {
             media: {
-                image: "https://1frase.com/fotos/d3/d3d9446802a44259755d38e6d163e820.jpg"
+                image: "/assets/post3.jpg"
             },
-            description: "Los imposibles también existen",
+            description:'"Es más la espera, cuando tienes la cara al sol."',
             date: "HACE 1 DIA"
         }
     },
     {
         idPost: "4",
         user: {
-            name: "Medina Villa",
-            image: "https://pbs.twimg.com/profile_images/1426936466484043785/oVG9izi9_400x400.jpg",
+            name: "malditanerea",
+            image: "https://www.centroculturalmigueldelibes.com/assets/tortuga-1-630x630.jpg",
             storyStatus: 1
         },
         content: {
             media: {
-                image: "https://uploads-ssl.webflow.com/61b36a9ff7cd65483c603817/61b36a9ff7cd658647603d33_frase-motivacional-steve-jobs.png"
+                image: "/assets/post4.jpg"
             },
-            description: "La verdad es que sí vale la pena esta frase. Atentos amigos",
+            description: "Nuevo sencillo ya disponible en nuestros medios de música.",
             date: "HACE 2 DIAS"
         }
     },
@@ -88,9 +88,9 @@ export const Posts: React.FC<{}> = () => {
         },
         content: {
             media: {
-                image: "https://uploads-ssl.webflow.com/61b36a9ff7cd65483c603817/61b36a9ff7cd658647603d33_frase-motivacional-steve-jobs.png"
+                image: "https://random.imagecdn.app/500/500"
             },
-            description: "La verdad es que sí vale la pena esta frase. Atentos amigos",
+            description: "Feliz viernes gente madrugadora",
             date: "HACE 2 DIAS"
         }
     }

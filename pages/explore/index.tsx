@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from "./../../styles/Explore.module.css";
 
@@ -43,13 +44,20 @@ const Messages: NextPage = () => {
         "https://random.imagecdn.app/303/307",
     ])
 
+    const router = useRouter()
+
+    const redirect: Function = (image: string) => {
+        localStorage.setItem("view_post", image);
+        router.push("post/AMxm3Y5S")
+    }
+
     return (
         <main className={styles.main}>
             <div className={styles.container}>
                 {
                     images.length > 0 && images.map((image: string, index) => {
                         return <div className={`${(index == 1 || index == 10 || index == 19) && styles.itemTwoColumsRows}`} key={index}>
-                            <Image src={image} height={index == 1 || index == 10 || index == 19 ? 480 : 240} width={index == 1 || index == 10 || index == 19 ? 480 : 240} alt="content" />
+                            <Image onClick={() => { redirect(image) }} src={image} height={index == 1 || index == 10 || index == 19 ? 480 : 240} width={index == 1 || index == 10 || index == 19 ? 480 : 240} alt="content" />
                         </div>
                     })
                 }

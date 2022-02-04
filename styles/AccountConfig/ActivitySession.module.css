@@ -1,0 +1,64 @@
+@media screen and (min-width: 0px) {
+    .container{
+        padding: 0 20px 20px 20px;
+    }
+    .title{
+        font-weight: lighter;
+        font-size: 28px;
+    }
+    .flexBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 1px solid rgb(231, 231, 231);
+    }
+
+    .flexBox div{
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        margin: 20px;
+        width: 50%;
+        cursor: pointer;
+    }
+    .flexBox div:nth-child(2){
+        border-left: 1px solid rgb(231, 231, 231);;
+    }
+    .popup{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .popupContent{
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 11px;
+    }
+    .boxContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .boxContainer div:nth-child(2){
+    padding: 12px;
+       flex: 1;
+    }
+    .active{
+        color:#58c322;
+    }
+    .grayText{
+        color: rgb(182, 182, 182);
+    }
+ }
+ @media screen and (min-width: 620px) {
+ }
+ @media screen and (min-width: 960px) {
+ }
+ @media screen and (min-width: 1200px) {
+ }
+ 
