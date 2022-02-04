@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import styles from "../../styles/AccountConfig/ProfileEdit.module.css";
 
-
-
 export const ProfileEdit: React.FC = () => {
     return (
         <div>

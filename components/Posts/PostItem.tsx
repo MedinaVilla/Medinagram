@@ -23,7 +23,7 @@ export const PostItem: React.FC<IPost> = (post: IPost) => {
         <div className={styles.card}>
             <div className={styles.header}>
                 <div className={styles.header}>
-                    <div className={post.user.storyStatus===1?styles.imageNotViewed:post.user.storyStatus===2?styles.imageViewed:""} style={{ width: "28px", height: "28px", borderRadius: "50%", overflow: 'hidden', position: 'relative' }}>
+                    <div className={post.user.storyStatus === 1 ? styles.imageNotViewed : post.user.storyStatus === 2 ? styles.imageViewed : ""} style={{ width: "28px", height: "28px", borderRadius: "50%", overflow: 'hidden', position: 'relative' }}>
                         <Image src={post.user.image} className={styles.icon} layout="fill" alt="post" />
                     </div>
                     <span className={styles.nameUser}>

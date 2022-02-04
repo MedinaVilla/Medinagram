@@ -49,7 +49,6 @@ const GridSaved: NextPage = () => {
         router.push("/post/AMxm3Y5S")
     }
 
-
     return (
         <main className={styles.main}>
             <div className={styles.container}>

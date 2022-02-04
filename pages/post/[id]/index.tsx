@@ -51,7 +51,7 @@ const Post: NextPage = () => {
                             <Image src="/assets/three-points.png" className={styles.icon} height={24} width={24} alt="threepoints" />
                         </div>
                     </div>
-                    <hr style={{    border: "0.5px solid rgb(231, 231, 231)",backgroundColor: "rgb(231, 231, 231"}} /><br />
+                    <hr style={{ border: "0.5px solid rgb(231, 231, 231)", backgroundColor: "rgb(231, 231, 231" }} /><br />
                     {/* Description content*/}
                     <div className={styles.descriptionContainer}>
                         <div className={post.user.storyStatus === 1 ? styles.imageNotViewed : post.user.storyStatus === 2 ? styles.imageViewed : ""} style={{ width: "28px", height: "28px", borderRadius: "50%", overflow: 'hidden', position: 'relative', paddingRight: "28px" }}>

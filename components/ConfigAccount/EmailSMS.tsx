@@ -13,28 +13,28 @@ export const EmailSMS: React.FC = () => {
             <div className={styles.smallText}>
                 Envía comentarios sobre Medinagram.
             </div>
-            <br/>
+            <br />
             <div className={styles.option}>
                 <div>
-                    <input type="checkbox" checked/> Correos electrónicos de recordatorio
+                    <input type="checkbox" checked /> Correos electrónicos de recordatorio
                 </div>
             </div>
             <div className={styles.smallText}>
                 Recibe notificaciones que quizá te hayas perdido.
             </div>
-            <br/>
+            <br />
             <div className={styles.option}>
                 <div>
-                    <input type="checkbox" checked/> Correos electrónicos de producto
+                    <input type="checkbox" checked /> Correos electrónicos de producto
                 </div>
             </div>
             <div className={styles.smallText}>
                 Recibe consejos sobre las herramientas de Medinagram.
             </div>
-            <br/>
+            <br />
             <div className={styles.option}>
                 <div>
-                    <input type="checkbox" checked/> Correos electrónicos de noticias
+                    <input type="checkbox" checked /> Correos electrónicos de noticias
                 </div>
             </div>
             <div className={styles.smallText}>

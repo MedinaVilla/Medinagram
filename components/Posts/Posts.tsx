@@ -60,7 +60,7 @@ export const Posts: React.FC<{}> = () => {
             media: {
                 image: "/assets/post3.jpg"
             },
-            description:'"Es más la espera, cuando tienes la cara al sol."',
+            description: '"Es más la espera, cuando tienes la cara al sol."',
             date: "HACE 1 DIA"
         }
     },

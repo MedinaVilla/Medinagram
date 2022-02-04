@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { useState } from 'react';
 import { Chat } from '../../components/messages/Chat';
 import { MessagesList } from '../../components/messages/MessagesList';

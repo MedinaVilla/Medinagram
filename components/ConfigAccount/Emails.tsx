@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./../../styles/AccountConfig/AppsWebsites.module.css";
 
@@ -14,7 +13,7 @@ export const Emails: React.FC = () => {
             return <div>
                 <p className={styles.smallText}>Aquí aparecerán los otros correos electrónicos de Medinagram de los últimos 14 días que no están relacionados con seguridad e inicio de sesión. Puedes usar esta lista para verificar qué mensajes son reales y cuáles son falsos.<span className={styles.link}> Más información.</span></p>
             </div>
-        } 
+        }
     }
 
     return (

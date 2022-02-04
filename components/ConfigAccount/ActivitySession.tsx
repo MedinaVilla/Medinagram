@@ -128,27 +128,27 @@ export const ActivitySession = () => {
                         <Image src="/assets/arrowdown.png" width={16} height={10} alt="h" />
                     </div>
                 </div>
-                <hr/>
+                <hr />
                 <div className={styles.boxContainer}>
                     <div>
                         <Image src="/assets/marker2.png" width={18} height={24} alt="h" />
                     </div>
                     <div>
                         Ciudad de México, Ciudad de México, Mexico<br />
-                        <span  className={styles.grayText}>Hace 21 horas</span>· <span className={styles.grayText}>Este Windows</span>
+                        <span className={styles.grayText}>Hace 21 horas</span>· <span className={styles.grayText}>Este Windows</span>
                     </div>
                     <div>
                         <Image src="/assets/arrowdown.png" width={16} height={10} alt="h" />
                     </div>
                 </div>
-                <hr/>
+                <hr />
                 <div className={styles.boxContainer}>
                     <div>
                         <Image src="/assets/marker2.png" width={18} height={24} alt="h" />
                     </div>
                     <div>
                         Ciudad de México, Ciudad de México, Mexico<br />
-                        <span  className={styles.grayText}>Hace 21 horas</span>· <span className={styles.grayText}>Este Windows</span>
+                        <span className={styles.grayText}>Hace 21 horas</span>· <span className={styles.grayText}>Este Windows</span>
                     </div>
                     <div>
                         <Image src="/assets/arrowdown.png" width={16} height={10} alt="h" />
