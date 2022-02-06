@@ -1,5 +1,5 @@
 import React from "react";
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import styles from "./../../styles/Profile.module.css";
 import Image from "next/image";
 import { MyStories } from "../../components/Stories/MyStories";
