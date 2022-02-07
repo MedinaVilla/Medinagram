@@ -14,3 +14,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.slick-center >div>div {
+  /* transform: scale(1.2, 1.2);     */
+  /* width: 400px!important; */
+  height: 100vh!important;
+}
+.slick-center div {
+  /* margin-top: 20px !important; */
+  /* padding-top: 5px !important; */
+  
+
+}
+.slick-center{
+    transform: scale(1.3, 1.2);    
+}
+
+
+/* .slick-slide.slick-center img { margin-left: auto; margin-right: auto; } */
+.slick-list { 
+  /* padding:45px 60px !important; */
+  /* padding-left:200px !important; */
+}
+.slick-slide {
+  margin: 0 30px;
+}
+
+/* the parent */
+.slick-list {
+  /* margin: 0 -30px; */
+}

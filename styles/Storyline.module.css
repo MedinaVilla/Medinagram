@@ -1,11 +1,12 @@
 @media screen and (min-width: 0px) {
     .container{
         background-color: black;
-        min-height: 100vh;
-        min-width: 100vw;
-        opacity:0.9;
+        height: 100vh;
+        width: 100vw;
+        max-width:100%;
+        /* opacity:0.9; */
         color: white;
-        position: absolute;
+        position: fixed;
         top: 0;
         z-index: 9999;
     }
@@ -15,36 +16,76 @@
         color: white;
         padding: 20px;
     }
-
-
-
+    .body{
+        position: absolute;
+        top: 0;
+        padding: 20px;
+        width: 100vw;
+        height: 100vh;
+    }
     .progressContainer {
+        /* border: 1px solid red; */
         display: flex;
         flex-direction: row;
-        width: 30vw;
         padding: 10px 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
       }
       
+      .item{
+          /* border: 1px solid green; */
+      }
+      .itemCarousel{
+          width: 300px!important;
+          height: 500px!important;
+          position: relative;
+          padding-top: 50% ;
+          
+          /* margin-top:20% */
+      }
+
       .progress {
         height: 2px;
         flex-grow: 1;
         border-radius: 4px;
         margin: 0 5px;
         display: flex;
-        background-image: -webkit-linear-gradient(left, 
-          rgba(255,255,255,.5) 0%,
-          rgba(255,255,255,.5) 50%,
-          rgba(88, 89, 104,.5) 50.001%,
-          rgba(88, 89, 104,.5) 100%
-        );
-        background-repeat: no-repeat;
-        background-size: 200%;
-        background-color: #666;
-        background-position: 100% 50%;
-        animation-timing-function: linear;
-        animation-delay: .2s;
       }
+      .progress::-moz-progress-bar { background: rgb(241, 241, 241); }
+        .progress::-webkit-progress-value { background: rgb(241, 241, 241); }
+.progress { color: rgb(241, 241, 241); }
+
+      .headerStory{
+          display: flex;    
+          justify-content: space-between;
+          padding: 16px;
+          font-size: 18px;
+      }
+      .nickname{
+          padding-left: 10px;
+      }
+      .timeago{
+          padding-left: 10px;
+          color: rgb(182, 182, 182);
+      }
+      .profile{
+          display: flex;
+          align-items: center;
+      }
+      .icons{
+          display: flex;
+          align-items: center;
+      }
+      .icons div{
+        padding-left: 10px;
+    }
+    .backgroundHeader{
+        opacity: 0.9;
+        background: linear-gradient(to bottom, rgb(48, 48, 48), transparent);
+        padding-bottom: 20px;
+    }
   }
   @media screen and (min-width: 620px) {
   }
