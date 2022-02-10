@@ -8,6 +8,10 @@
         color: white;
         position: fixed;
         top: 0;
+        z-index: 999999;
+    }
+    .logo{
+        cursor: pointer;
         z-index: 9999;
     }
     .header{
@@ -17,6 +21,7 @@
         padding: 20px;
     }
     .body{
+        border:1px solid red;
         position: absolute;
         top: 0;
         padding: 20px;
@@ -55,20 +60,22 @@
       }
       .progress::-moz-progress-bar { background: rgb(241, 241, 241); }
         .progress::-webkit-progress-value { background: rgb(241, 241, 241); }
-.progress { color: rgb(241, 241, 241); }
+        .progress { color: rgb(241, 241, 241); }
 
       .headerStory{
           display: flex;    
           justify-content: space-between;
-          padding: 16px;
+          padding: 8px 16px 8px 16px;
           font-size: 18px;
       }
       .nickname{
           padding-left: 10px;
+          font-size: 14px;
       }
       .timeago{
           padding-left: 10px;
           color: rgb(182, 182, 182);
+          font-size: 14px;
       }
       .profile{
           display: flex;

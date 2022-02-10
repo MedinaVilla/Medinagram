@@ -27,7 +27,8 @@ a {
 
 }
 .slick-center{
-    transform: scale(1.3, 1.2);    
+    transform: scale(1.3, 1.2)!important;    
+    padding: 0 40px;
 }
 
 
@@ -37,7 +38,9 @@ a {
   /* padding-left:200px !important; */
 }
 .slick-slide {
-  margin: 0 30px;
+  transform: scale(0.8, 0.8);  
+  padding: 0 40px;
+  /* margin:  30px; */
 }
 
 /* the parent */
