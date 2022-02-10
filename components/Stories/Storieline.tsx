@@ -71,12 +71,14 @@ export const Storieline: React.FC<any> = ({ childFunc, goNextSlide, story, page,
     }, [actualStory, index, page, play])
 
     useEffect(() => {
-        if (prevStory) {
-            progress.current[actualStory].value = 0;
-            cleanPrevStory();
+        if (page == index) {
+            if (prevStory) {
+                progress.current[actualStory].value = 0;
+                cleanPrevStory();
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [cleanPrevStory, prevStory])
+    }, [cleanPrevStory, prevStory, page, index])
 
 
     const storiesPausedPlay = () => {

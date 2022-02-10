@@ -1,7 +1,7 @@
 @media screen and (min-width: 0px) {
   .main {
       min-height: 50vh;
-      min-width: 100vw;
+      max-width: 100%;
       background-color: #fafafa;
       padding-top: 20px;
       padding-left: 400px;

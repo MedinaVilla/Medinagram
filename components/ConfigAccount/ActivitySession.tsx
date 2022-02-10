@@ -118,7 +118,7 @@ export const ActivitySession = () => {
             <div>
                 <div className={styles.boxContainer}>
                     <div>
-                        <Image src="/assets/marker2.png" width={18} height={24} alt="h" />
+                        <Image src="/assets/marker2.png" width={18} height={24} alt="marker" />
                     </div>
                     <div>
                         Ciudad de México, Ciudad de México, Mexico<br />
