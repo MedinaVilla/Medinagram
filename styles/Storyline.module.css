@@ -69,12 +69,12 @@
       }
       .nickname{
           padding-left: 10px;
-          font-size: 14px;
+          font-size: 12px;
       }
       .timeago{
           padding-left: 10px;
           color: rgb(182, 182, 182);
-          font-size: 14px;
+          font-size: 12px;
       }
       .profile{
           display: flex;
@@ -86,6 +86,7 @@
       }
       .icons div{
         padding-left: 10px;
+        cursor: pointer;
     }
     .backgroundHeader{
         opacity: 0.9;

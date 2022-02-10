@@ -3,29 +3,50 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./../../styles/Storyline.module.css";
 
 
-export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, page, index, updateMiniStory }) => {
+interface IProps {
+    id: string,
+    user: {
+        image: string,
+        nickname: string
+    },
+    timeago: string,
+    image: string[]
 
+}
+
+export const Storieline: React.FC<any> = ({ childFunc, goNextSlide, story, page, index, updateMiniStory, prevStory, cleanPrevStory }) => {
     const progress = useRef<any>();
     const [actualStory, setActualStory] = useState(0);
     const [play, setPlay] = useState(true);
 
     const intervalRef = useRef<any>();
 
-    const useHasChanged = (val: any) => {
-        const prevVal = usePrevious(val)
-        if (prevVal === undefined) return null; else
-            return prevVal! < val;
-    }
+    useEffect(() => {
+        function changeRightStory() {
+            if (actualStory + 1 === progress.current.length - 1) {
+                progress.current[actualStory].value = 100;
+            } else {
+                progress.current[actualStory].value = 100;
+            }
+        }
 
-    const usePrevious = (value: any) => {
-        const ref = useRef();
-        useEffect(() => {
-            ref.current = value;
-        });
-        return ref.current;
-    }
+        function changeLeftStory() {
+            if (actualStory === 0) {
+                progress.current[actualStory].value = 0;
+                clearInterval(intervalRef.current);
+                goNextSlide(false, progress.current.length);
 
-    const goToRightDirection = useHasChanged(changeStory)
+            } else {
+                if (actualStory > 0) {
+                    progress.current[actualStory].value = 0;
+                    progress.current[actualStory - 1].value = 0;
+                    clearInterval(intervalRef.current);
+                    setActualStory(actualStory - 1)
+                }
+            }
+        }
+        childFunc(changeLeftStory, changeRightStory);
+    }, [childFunc, goNextSlide, actualStory])
 
     useEffect(() => {
         if (play === true && page == index && actualStory >= 0) {
@@ -46,47 +67,16 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
             }, 50);
             intervalRef.current = a;
         } else clearInterval(intervalRef.current);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [actualStory, index, page, play])
 
-
     useEffect(() => {
-        if (page == index) { // Se encuentra activa la historia
-            if (changeStory < progress.current.length && changeStory >= 0) {
-                if (actualStory + 1 === progress.current.length) {
-                    console.log(goToRightDirection)
-                    if (goToRightDirection || actualStory === 0) {
-                        progress.current[actualStory].value = 0;
-                    } else {
-                        progress.current[actualStory].value = 0;
-                        progress.current[actualStory - 1].value = 0;
-                        clearInterval(intervalRef.current);
-                        setActualStory(actualStory - 1)
-                    }
-                } else
-                    if (goToRightDirection) {
-                        progress.current[actualStory].value = 100;
-                    } else {
-                        if (actualStory > 0) {
-                            progress.current[actualStory].value = 0;
-                            progress.current[actualStory - 1].value = 0;
-                            clearInterval(intervalRef.current);
-                            setActualStory(actualStory - 1)
-                        }
-                    }
-            } else {
-                if (changeStory === progress.current.length) {
-                    progress.current[actualStory].value = 100;
-                    goNextSlide(true, progress.current.length);
-                } else {
-                    progress.current[actualStory].value = 0;
-                    clearInterval(intervalRef.current);
-                    goNextSlide(false, progress.current.length);
-
-                }
-            }
-
+        if (prevStory) {
+            progress.current[actualStory].value = 0;
+            cleanPrevStory();
         }
-    }, [changeStory, index, page,])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [cleanPrevStory, prevStory])
 
 
     const storiesPausedPlay = () => {
@@ -97,7 +87,6 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
             setPlay(true);
         }
     }
-
 
     return (
         <div className={styles.itemCarousel}>
@@ -112,7 +101,7 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
                     </div>
                     <div className={styles.headerStory}>
                         <div className={styles.profile}>
-                            <div style={{ width: "36px", height: "36px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
+                            <div style={{ width: "32px", height: "32px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
                                 <Image src={story.user.image} layout="fill" alt="home" />
                             </div>
                             <div className={styles.nickname}>
@@ -124,13 +113,13 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
                         </div>
                         <div className={styles.icons}>
                             <div>
-                                <Image onClick={() => storiesPausedPlay()} src="/assets/pause.png" width={24} height={24} alt="compass" />
+                                <Image onClick={() => storiesPausedPlay()} src="/assets/pause.png" width={24} height={24} alt="pause" />
                             </div>
                             <div>
-                                <Image src="/assets/speaker.png" width={20} height={17} alt="compass" />
+                                <Image src="/assets/speaker.png" width={15} height={18} alt="speaker" />
                             </div>
                             <div>
-                                <Image src="/assets/three-points.png" width={24} height={24} alt="compass" />
+                                <Image src="/assets/more.png" width={24} height={24} alt="more" />
                             </div>
                         </div>
                     </div>

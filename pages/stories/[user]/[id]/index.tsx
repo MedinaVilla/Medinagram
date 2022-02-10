@@ -8,7 +8,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Storieline } from "../../../../components/Stories/Storieline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
+
+interface IStory {
+    id: string,
+    user:{
+        image:string,
+        nickname: string
+    }, 
+    timeago:string,
+    image: string[]
+
+}
 
 const Storyline: NextPage = () => {
     const [actualPage, setActualPage] = useState(0);
@@ -16,7 +28,12 @@ const Storyline: NextPage = () => {
 
     const sliderRef = useRef<any>();
 
-    const [storiesUser, setStoriesUser] = useState([
+    const router = useRouter();
+    const { user } = router.query;
+    const [loading, setLoading] = useState(true);
+    const [prevStory, setPrevStory] = useState(false);
+
+    const [storiesUser, setStoriesUser] = useState<IStory[]>([
         {
             id: "2767297324739821285",
             user: {
@@ -64,6 +81,23 @@ const Storyline: NextPage = () => {
 
     ])
 
+    useEffect(() => {
+        let index = -1;
+        storiesUser.find(function (story, i) {
+            if (story.user.nickname === user) {
+                index = i;
+                return i;
+            }
+        });
+        if (index >= 0) {
+            setActualPage(index);
+            setLoading(false);
+        } else{
+            setLoading(false);
+        }
+
+    }, [storiesUser, user])
+
     var settings = {
         centerMode: true,
         dots: true,
@@ -71,6 +105,7 @@ const Storyline: NextPage = () => {
         speed: 300,
         slidesToShow: 1,
         // focusOnSelect: true,
+        initialSlide: actualPage,
         arrows: false,
         draggable: false,
         variableWidth: true,
@@ -78,14 +113,19 @@ const Storyline: NextPage = () => {
     };
 
     const beforeChange = (rightDirection: boolean, lastIndex: number) => {
-        if (rightDirection) {
+        if (rightDirection && sliderRef.current) {
             setMiniStoryPosition(0);
+            sliderRef.current.slickGoTo(actualPage + 1)
             setActualPage(actualPage + 1)
-            sliderRef.current.slickNext()
         } else {
-            setMiniStoryPosition(lastIndex - 1);
-            sliderRef.current.slickPrev();
-            setActualPage(actualPage - 1)
+            if (sliderRef.current) {
+                
+                setMiniStoryPosition(lastIndex - 1);
+                sliderRef.current.slickGoTo(actualPage - 1)
+                setActualPage(actualPage - 1)
+                setPrevStory(true);
+            }
+
         }
     }
 
@@ -93,36 +133,40 @@ const Storyline: NextPage = () => {
         setMiniStoryPosition(miniStoryPosition + 1);
     }
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.header}>
-                 <Link href="/" passHref={true}><Image className={styles.logo} src="/assets/logoMBlack.png" width="125" height="35" alt="logo" /></Link>
-                <Link href="/" passHref={true}><div style={{ cursor: "pointer", zIndex: "9999" }}>X</div></Link>
-            </div>
-            <div>
-                <div className={styles.body}>
-                    <Slider ref={sliderRef}  {...settings}>
-                        {storiesUser.length > 0 && storiesUser.map((story, index) => {
-                            return <React.Fragment key={index}
-                            ><Storieline changeStory={miniStoryPosition} goNextSlide={(value: boolean, lastIndex: number) => { beforeChange(value, lastIndex) }} story={story} page={actualPage} index={index} updateMiniStory={updateMiniStory} />
-                            </React.Fragment>
-                        })}
-                    </Slider>
+    const childFunc = React.useRef<any[]>([]);
+
+    if (!loading) {
+        return (
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    <Link href="/" passHref={true}><Image className={styles.logo} src="/assets/logoMBlack.png" width="125" height="35" alt="logo" /></Link>
+                    <Link href="/" passHref={true}><div style={{ cursor: "pointer", zIndex: "9999" }}>X</div></Link>
                 </div>
-                <div style={{ textAlign: "center" }}>
-                    {actualPage === 0 && miniStoryPosition === 0 ? "" :
-                        <div onClick={() => { setMiniStoryPosition(miniStoryPosition - 1) }} style={{ cursor: "pointer", width: 30, height: 30, position: "relative", top: "400px", left: "540px" }}>
-                            <Image src="/assets/left.png" layout="fill" alt="right" />
-                        </div>
-                    }
-                    {actualPage === storiesUser.length - 1 && miniStoryPosition === storiesUser[storiesUser.length - 1].image.length - 1 ? "" :
-                        <div onClick={() => { setMiniStoryPosition(miniStoryPosition + 1) }} style={{ cursor: "pointer", width: 30, height: 30, position: "fixed", top: "400px", right: "540px" }}>
-                            <Image src="/assets/right.jpg" layout="fill" alt="right" />
-                        </div>
-                    }
+                <div>
+                    <div className={styles.body}>
+                        <Slider ref={sliderRef}  {...settings}>
+                            {storiesUser.length > 0 && storiesUser.map((story, index) => {
+                                return <React.Fragment key={index}
+                                ><Storieline childFunc={(firstCallback: Function, secondCallback: Function) => { childFunc.current[index] = {}; childFunc.current[index].leftClick = firstCallback; childFunc.current[index].rightClick = secondCallback; }} goNextSlide={(value: boolean, lastIndex: number) => { beforeChange(value, lastIndex) }} story={story} page={actualPage} index={index} updateMiniStory={updateMiniStory} prevStory={prevStory} cleanPrevStory={()=>setPrevStory(false)}  />
+                                </React.Fragment>
+                            })}
+                        </Slider>
+                    </div>
+                    <div style={{ textAlign: "center" }}>
+                        {actualPage === 0 && miniStoryPosition === 0 ? "" :
+                            <div onClick={() => { childFunc.current ? childFunc.current[actualPage].leftClick() : "" }} style={{ cursor: "pointer", width: 30, height: 30, position: "fixed", top: "400px", left: "540px" }}>
+                                <Image src="/assets/left2.png" layout="fill" alt="right" />
+                            </div>
+                        }
+                        {actualPage === storiesUser.length - 1 && miniStoryPosition === storiesUser[storiesUser.length - 1].image.length - 1 ? "" :
+                            <div onClick={() => { childFunc.current ? childFunc.current[actualPage].rightClick() : "" }} style={{ cursor: "pointer", width: 30, height: 30, position: "fixed", top: "400px", right: "540px" }}>
+                                <Image src="/assets/right2.png" layout="fill" alt="right" />
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
-        </div >
-    )
+        )
+    } else return <div>Loading...</div>;
 }
 export default Storyline;
