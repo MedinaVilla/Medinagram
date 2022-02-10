@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useRef, useState } from "react";
 import styles from "./../../styles/Stories.module.css";
 interface IStorie {
@@ -93,12 +94,12 @@ export const Stories: React.FC<{}> = () => {
             <div className={styles.container} ref={ref}>
                 {stories.length > 0 && stories.map((storie: IStorie, index: number) => {
                     return (
-                        <div key={index}>
+                        <Link href={`/stories/${storie.nickname}/6234623623634`} passHref={true} key={index}><div>
                             <div className={`${storie.view ? styles.imageViewed : styles.imageNotViewed}`} style={{ width: "42px", height: "42px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
                                 <Image src={storie.image} layout="fill" alt="home" />
                             </div>
                             <div className={styles.nickname}>{storie.nickname}</div>
-                        </div>
+                        </div></Link>
                     )
                 })}
             </div>

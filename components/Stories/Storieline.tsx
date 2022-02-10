@@ -34,9 +34,8 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
                     progress.current[actualStory].value = progress.current[actualStory].value + 1;
                     if (progress.current[actualStory].value == 100) {
                         if (actualStory == progress.current.length - 1) {
-                           
                             clearInterval(a);
-                            goNextSlide(true);
+                            goNextSlide(true, progress.current.length);
                         } else {
                             updateMiniStory();
                             setActualStory(actualStory + 1);
@@ -54,7 +53,8 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
         if (page == index) { // Se encuentra activa la historia
             if (changeStory < progress.current.length && changeStory >= 0) {
                 if (actualStory + 1 === progress.current.length) {
-                    if (goToRightDirection) {
+                    console.log(goToRightDirection)
+                    if (goToRightDirection || actualStory === 0) {
                         progress.current[actualStory].value = 0;
                     } else {
                         progress.current[actualStory].value = 0;
@@ -76,11 +76,11 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
             } else {
                 if (changeStory === progress.current.length) {
                     progress.current[actualStory].value = 100;
-                    goNextSlide(true);
+                    goNextSlide(true, progress.current.length);
                 } else {
                     progress.current[actualStory].value = 0;
                     clearInterval(intervalRef.current);
-                    goNextSlide(false);
+                    goNextSlide(false, progress.current.length);
 
                 }
             }
@@ -113,13 +113,13 @@ export const Storieline: React.FC<any> = ({ changeStory, goNextSlide, story, pag
                     <div className={styles.headerStory}>
                         <div className={styles.profile}>
                             <div style={{ width: "36px", height: "36px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
-                                <Image src="https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s320x320/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=ZIEVOGYpSUIAX8hTrTa&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT96lC7REFqnj90RLh8_mq-LG5AkxwwYq9QZMleCvQQrzQ&oe=6207EABA&_nc_sid=7bff83" layout="fill" alt="home" />
+                                <Image src={story.user.image} layout="fill" alt="home" />
                             </div>
                             <div className={styles.nickname}>
-                                medinavilla
+                                {story.user.nickname}
                             </div>
                             <div className={styles.timeago}>
-                                6h
+                                {story.timeago}
                             </div>
                         </div>
                         <div className={styles.icons}>

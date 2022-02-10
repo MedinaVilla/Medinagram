@@ -12,7 +12,7 @@ export const FollowSuggest: React.FC<{}> = () => {
         {
             nickname: "medinavilla",
             name: "Medina",
-            image: "https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rnc7jXLZ71UAX9f0vx-&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT97zvuWfTwKeljU8WkFcqngUwdKaK2y_Iopn3yZMKjEow&oe=61F1ACAF&_nc_sid=7bff83"
+            image: "/assets/profile.jpg"
         }
     )
     const [suggests, setSuggests] = useState<ISuggest[]>([
