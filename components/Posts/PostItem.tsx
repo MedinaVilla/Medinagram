@@ -35,8 +35,8 @@ export const PostItem: React.FC<IPost> = (post: IPost) => {
                 </div>
             </div>
             <div>
-                <div style={{ width: "100%", height: "460px", position: 'relative' }}>
-                    {post.content.media.image ? <Image src={post.content.media.image} layout="fill" alt="post" /> : ""}
+                <div className={styles.postImage}>
+                    {post.content.media.image ? <Image src={post.content.media.image} layout="fill" objectFit="cover" alt="post" /> : ""}
                 </div>
             </div>
             <div className={styles.bottom}>

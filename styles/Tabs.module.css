@@ -2,6 +2,8 @@
     .tabs{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
    }
     .tabs div{
         display: flex;
@@ -27,6 +29,9 @@
    }
 }
 @media screen and (min-width: 620px) {
+    .tabs{
+        justify-content: center;
+   }
 }
 @media screen and (min-width: 960px) {
 }

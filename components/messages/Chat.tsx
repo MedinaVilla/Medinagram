@@ -59,7 +59,7 @@ export const Chat: React.FC<any> = ({ chatWith }) => {
 
     if (chatWith)
         return (
-            <div>
+            <div className={styles.main}>
                 <div className={styles.container}>
                     <div className={styles.header}>
                         <div className={styles.userInfo}>
@@ -86,9 +86,9 @@ export const Chat: React.FC<any> = ({ chatWith }) => {
                                 {
                                     messagesDay.messages.length > 0 && messagesDay.messages.map((message, index: number) => {
                                         return <div className={styles.messageContainer} key={index}>
-                                            <span className={`${styles.messageChat} ${message.me ? styles.messageMe : styles.messageFriend}`}>
+                                            <div className={`${styles.messageChat} ${message.me ? styles.messageMe : styles.messageFriend}`}>
                                                 {message.message}
-                                            </span>
+                                            </div> 
                                         </div>
                                     })
                                 }

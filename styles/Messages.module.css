@@ -1,47 +1,52 @@
 @media screen and (min-width: 0px) {
-    .main {
-        min-height: 50vh;
-        min-width: 100vw;
-        background-color: #fafafa;
-        padding-top: 20px;
-        padding-left: 400px;
-        padding-right: 400px;
-      }
-      .container{
-        display: flex;
-        justify-content: center;
-      }
-      
- } 
- 
- @media screen and (min-width: 620px) {
-    
- } 
- 
- @media screen and (min-width: 960px) {
-     
- }
- 
- @media screen and (min-width: 1200px) {
- 
- }  @media screen and (min-width: 0px) {
   .main {
-      min-height: 50vh;
-      width: 100vw;
-      background-color: #fafafa;
-      padding-top: 20px;
-      padding-left: 400px;
-      padding-right: 400px;
-      max-width: 100%;
- }
-  .container{
-      display: flex;
-      justify-content: center;
- }
+    min-height: 50vh;
+    width: 100vw;
+    max-width: 100%;
+    /* background-color: #fafafa; */
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .container>div:first-child {
+    width: 100%;
+    background-color: red;
+  }
+
+  .container>div:nth-child(2) {
+    width: 100%;
+    /* padding-top: 20px; */
+    
+  }
+
 }
+
 @media screen and (min-width: 620px) {
+
+  .container {
+    flex-direction: row;
+    align-items:inherit
+
+  }
+
+  .container>div:first-child {
+    width: 300px;
+  }
+
+  .container>div:nth-child(2) {
+    width: 600px;
+    padding-top: 0px;
+
+  }
+  
 }
-@media screen and (min-width: 960px) {
-}
-@media screen and (min-width: 1200px) {
-}
+
+@media screen and (min-width: 960px) {}
+
+@media screen and (min-width: 1200px) {}

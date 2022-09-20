@@ -35,7 +35,7 @@ const Post: NextPage = () => {
 
     return (
         <div className={styles.card}>
-            <div style={{ width: "500px", height: "500px", position: 'relative' }}>
+            <div className={styles.postImage}>
                 {viewPost ? <Image src={viewPost} layout="fill" alt="post" /> : post.content.media.image ? <Image src={post.content.media.image} layout="fill" alt="post" /> : ""}
             </div>
             <div className={styles.bottom}>

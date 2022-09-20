@@ -56,7 +56,7 @@ const Messages: NextPage = () => {
             <div className={styles.container}>
                 {
                     images.length > 0 && images.map((image: string, index) => {
-                        return <div className={`${(index == 1 || index == 10 || index == 19) && styles.itemTwoColumsRows}`} key={index}>
+                        return <div className={`${(index == 1 || index == 10 || index == 19) && styles.itemTwoColumsRows }`} key={index}>
                             <Image onClick={() => { redirect(image) }} src={image} height={index == 1 || index == 10 || index == 19 ? 480 : 240} width={index == 1 || index == 10 || index == 19 ? 480 : 240} alt="content" />
                         </div>
                     })

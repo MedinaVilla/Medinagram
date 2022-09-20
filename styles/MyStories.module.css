@@ -1,11 +1,16 @@
 @media screen and (min-width: 0px) {
     .container{
-        width: 500px;
+        /* width: 500px; */
+        width: 100%;
+        min-width: 0;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         padding-top: 24px;
    }
     .container > div{
-        padding-right: 36px;
+        padding-left: 16px;
+        padding-right: 16px;
         cursor: pointer;
    }
     .nickname{

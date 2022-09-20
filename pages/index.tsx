@@ -7,19 +7,17 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.container}>
-          <div >
+          <div className={styles.content}>
             <Stories />
             <Posts />
           </div>
-          <div >
+          <div className={styles.aside}>
             <FollowSuggest />
           </div>
         </div>
       </main>
-    </div>
   )
 }
 

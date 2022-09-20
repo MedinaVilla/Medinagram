@@ -8,14 +8,14 @@ export const Help: React.FC = () => {
             <div className={styles.list}>
                 <div className={styles.flex}>
                     <div>Servicio de ayuda</div>
-                    <div>></div>
+                    <div></div>
                 </div>
                 <div className={styles.flex}>
                     <div>Ayuda sobre privacidad  y seguridad</div>
-                    <div>></div>
+                    <div></div>
                 </div> <div className={styles.flex}>
                     <div>Solicitudesd de ayuda</div>
-                    <div>></div>
+                    <div></div>
                 </div>
             </div>
         </div>

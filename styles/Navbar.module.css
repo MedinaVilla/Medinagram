@@ -7,15 +7,17 @@
         right: 0;
         background-color: white;
         z-index: 9;
+        display: flex;
+        justify-content: center;
    }
     .flexLogo{
-        flex: 0 0 327px;
    }
     .flexLogo img{
         cursor: pointer;
    }
     .flexSearch{
-        flex: 0 0 327px;
+        display: none;
+
    }
     .buttonGroup{
         display: flex;
@@ -24,14 +26,17 @@
         padding-left: 20px;
    }
     .buttonGroup img{
+        width: 50px;
         cursor: pointer;
    }
     .list{
         height: 30px;
         display: flex;
         justify-items: center;
-        justify-content: center;
+        justify-content: space-between;
         list-style-type: none;
+        min-width: 400px;
+        width: 975px;
    }
     .list li{
         align-items: center;
@@ -48,7 +53,13 @@
         color: rgb(255, 255, 255);
    }
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 720px) {
+
+    .flexSearch{
+        display: block;
+   }
+
+
 }
 @media screen and (min-width: 960px) {
 }

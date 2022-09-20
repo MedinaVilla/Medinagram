@@ -1,7 +1,8 @@
 @media screen and (min-width: 0px) {
   .container{
       border: 1px solid rgb(214, 214, 214);
-      width: 500px;
+      /* width: 90vw; */
+      max-width: 100%;
       background-color: white;
       padding: 12px 16px 6px 16px;
       white-space: nowrap;
@@ -52,6 +53,7 @@
     position: absolute!important;
     top: 110px !important;
     margin-left: 475px;
+    right: 0;
     z-index: 1;
     width: 22px;
     height: 22px;
@@ -61,7 +63,11 @@
     cursor: pointer;
 }
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 514px) {
+    .rightArrow{
+        margin-left: 475px;
+        right: inherit;
+    }
 }
 @media screen and (min-width: 960px) {
 }
