@@ -59,7 +59,7 @@ export const FollowSuggest: React.FC<{}> = () => {
                         return (
                             <div key={index} className={styles.profileSection}>
                                 <div style={{ width: "36px", height: "36px", borderRadius: "50%", overflow: 'hidden', position: "relative" }}>
-                                    <Image src={suggest.image} layout="fill" alt="profile" />
+                                    <Image src={suggest.image} layout="fill" alt="profile" objectFit="cover"  />
                                 </div>
                                 <div className={styles.info}>
                                     <p style={{ color: "#262626", textOverflow: "ellipsis", overflow: "hidden" }}><strong>{suggest.nickname}</strong> <br /> <span className={styles.followFriends}>{suggest.friends.length > 0 && <Fragment key={index}>{suggest.friends[0]} y {suggest.friends.length - 1} siguen esta cuenta</Fragment>}</span></p>

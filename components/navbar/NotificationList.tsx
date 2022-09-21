@@ -84,7 +84,7 @@ export const NotificationList: React.FC<{}> = () => {
                     return (
                         <div className={styles.notificationItem} key={index}>
                             <div style={{ width: "26px", height: "26px", borderRadius: "50%", overflow: 'hidden' }}>
-                                <Image src={notification.userFrom.image} width={26} height={26} alt="home" />
+                                <Image src={notification.userFrom.image} width={26} height={26} objectFit="cover" alt="like" />
                             </div>
                             <div className={styles.notificationContent}>
                                 {notification.newFollow ? <p><strong>{notification.userFrom.nickname}</strong> empezó a seguirte</p> : notification.newComment ? <p><strong>{notification.userFrom.nickname}</strong> comentó: {notification.newComment.comment}</p> : notification.newLike ? <p>A <strong>{notification.userFrom.nickname}</strong> le gustó tu foto</p> : ""}

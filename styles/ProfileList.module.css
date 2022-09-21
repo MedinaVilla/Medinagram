@@ -1,13 +1,15 @@
 @media screen and (min-width: 0px) {
   .container{
       border: 1px solid rgb(214, 214, 214);
-      width: 260px;
+      /* width: 260px; */
+      width: 100%;
       background-color: white;
       font-size: 9px;
-      position: fixed;
+      position: absolute;
       margin-top: 10px;
-      margin-left: -230px;
+      /* margin-left: -230px; */
       padding: 10px;
+      left: 0;
       border-radius: 5px;
  }
   .flexItem{
@@ -33,6 +35,18 @@
  }
 }
 @media screen and (min-width: 620px) {
+    .container{
+        left: inherit;
+        /* border: 1px solid rgb(214, 214, 214); */
+        width: 260px;
+        /* background-color: white; */
+        /* font-size: 9px; */
+        /* position: absolute; */
+        /* margin-top: 10px; */
+        margin-left: -230px;
+        /* padding: 10px; */
+        /* border-radius: 5px; */
+   }
 }
 @media screen and (min-width: 960px) {
 }
