@@ -39,7 +39,8 @@
  }
  .leftArrow{
      position: absolute!important;
-     top: 110px !important;
+     /* top: 110px !important; */
+     margin-top: -50px;
      margin-left: 5px;
      width: 20px;
      z-index: 9;
@@ -51,7 +52,8 @@
  }
  .rightArrow{
     position: absolute!important;
-    top: 110px !important;
+    /* top: 110px !important; */
+    margin-top: -50px;
     margin-left: 475px;
     right: 0;
     z-index: 1;

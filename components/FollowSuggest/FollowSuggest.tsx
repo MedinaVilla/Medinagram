@@ -18,7 +18,7 @@ export const FollowSuggest: React.FC<{}> = () => {
     const [suggests, setSuggests] = useState<ISuggest[]>([
         {
             nickname: "mark_zuckerberg",
-            image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+            image: "https://backend.artreview.com/wp-content/uploads/2021/11/square-Mark-Zuckerberg_Courtesy-Facebook.jpg",
             friends: ["madribd", "stephenGrider23", "Aysikomono"]
         },
         {

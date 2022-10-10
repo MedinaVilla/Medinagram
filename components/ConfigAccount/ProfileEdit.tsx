@@ -8,7 +8,7 @@ export const ProfileEdit: React.FC = () => {
             <div className={styles.flexbox}>
                 <div>
                     <div style={{ width: "42px", height: "42px", borderRadius: "50%", overflow: 'hidden' }}>
-                        <Image src="https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/192652294_2862989684011510_3685363033691202201_n.jpg?_nc_ht=instagram.fpbc6-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=NG9B8gYVCuUAX_13tnu&edm=ALbqBD0BAAAA&ccb=7-4&oh=00_AT-LmHKl_VzZPPoesfaMrtRhuQkerJs0yEyN3Yah8CFncg&oe=61FF846F&_nc_sid=9a90d6" width={42} height={42} alt="image" />
+                        <Image src="/assets/profile.jpg" width={42} height={42} alt="image" />
                     </div>
                 </div>
                 <div style={{ paddingLeft: "20px" }}>

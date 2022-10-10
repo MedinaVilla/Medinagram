@@ -88,9 +88,7 @@ export const Stories: React.FC<{}> = () => {
     return (
         <div className={styles.wrapper}>
 
-            {scrollPosition > 0 && <div onClick={() => { scroll(-170) }} className={styles.leftArrow}>
-                <Image src="/assets/left.png" width={20} height={20} alt="right" />
-            </div>}
+            
             <div className={styles.container} ref={ref}>
                 {stories.length > 0 && stories.map((storie: IStorie, index: number) => {
                     return (
@@ -103,6 +101,9 @@ export const Stories: React.FC<{}> = () => {
                     )
                 })}
             </div>
+            {scrollPosition > 0 && <div onClick={() => { scroll(-170) }} className={styles.leftArrow}>
+                <Image src="/assets/left.png" width={20} height={20} alt="right" />
+            </div>}
             { <div onClick={() => { scroll(170) }} className={styles.rightArrow}>
                 <Image src="/assets/right.jpg" layout="fill" alt="right" />
             </div>

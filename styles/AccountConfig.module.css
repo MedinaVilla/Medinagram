@@ -39,7 +39,8 @@
     }
 
     .content {
-        width: 580px;
+        width: 100;
+        min-width: 0;
         border: 1px solid rgb(231, 231, 231);
         padding: 18px 32px 0 32px;
     }
@@ -67,7 +68,9 @@
 
     .flexInput {
         padding-bottom: 18px;
-        width: 500px;
+        /* width: 500px; */
+        max-width: 500px;
+        width: 100%;
         display: flex;
         justify-content: center;
     }

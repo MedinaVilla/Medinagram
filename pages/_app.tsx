@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="icon" href="/favicon.png" />
     </Head>
     <Navbar />
-    <br /> <br /> <br />
     <Component {...pageProps} />
     <div id="modal-root"></div>
     <Footer />
